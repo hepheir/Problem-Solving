@@ -1,0 +1,131 @@
+- 
+  input: "50 20"
+  output: "35 15"
+- 
+  input: "50 21"
+  output: "impossible"
+-
+  input: "50 60"
+  output: "impossible"
+
+# CUSTOM GENERATED DATA BELOW
+-
+  name: "Custom data by Hepheir (1)"
+  input: "338 181"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (2)"
+  input: "351 8"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (3)"
+  input: "393 887"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (4)"
+  input: "528 597"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (5)"
+  input: "388 206"
+  output: "297 91"
+-
+  name: "Custom data by Hepheir (6)"
+  input: "873 884"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (7)"
+  input: "572 124"
+  output: "348 224"
+-
+  name: "Custom data by Hepheir (8)"
+  input: "909 543"
+  output: "726 183"
+-
+  name: "Custom data by Hepheir (9)"
+  input: "96 607"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (10)"
+  input: "768 661"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (11)"
+  input: "724 378"
+  output: "551 173"
+-
+  name: "Custom data by Hepheir (12)"
+  input: "535 975"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (13)"
+  input: "765 597"
+  output: "681 84"
+-
+  name: "Custom data by Hepheir (14)"
+  input: "404 759"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (15)"
+  input: "753 442"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (16)"
+  input: "385 99"
+  output: "242 143"
+-
+  name: "Custom data by Hepheir (17)"
+  input: "201 119"
+  output: "160 41"
+-
+  name: "Custom data by Hepheir (18)"
+  input: "327 457"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (19)"
+  input: "577 938"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (20)"
+  input: "53 462"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (21)"
+  input: "484 802"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (22)"
+  input: "75 729"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (23)"
+  input: "527 350"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (24)"
+  input: "340 197"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (25)"
+  input: "969 137"
+  output: "553 416"
+-
+  name: "Custom data by Hepheir (26)"
+  input: "452 307"
+  output: "impossible"
+-
+  name: "Custom data by Hepheir (27)"
+  input: "762 700"
+  output: "731 31"
+-
+  name: "Custom data by Hepheir (28)"
+  input: "474 296"
+  output: "385 89"
+-
+  name: "Custom data by Hepheir (29)"
+  input: "932 660"
+  output: "796 136"
+-
+  name: "Custom data by Hepheir (30)"
+  input: "843 216"
+  output: "impossible"
