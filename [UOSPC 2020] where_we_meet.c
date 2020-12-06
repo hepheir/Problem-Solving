@@ -9,8 +9,6 @@ void main() {
   int x, y, w, h;
   int x0, y0, x1, y1;
 
-  int area;
-
   scanf("%d", &N);
 
   scanf("%d %d %d %d", &x, &y, &w, &h);
