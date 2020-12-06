@@ -5,9 +5,7 @@
 void main() {
   int N;
   int av_x0, av_y0, av_x1, av_y1; // 친구들이 모두 모일 수 있는 장소 후보
-  
   int x, y, w, h;
-  int x0, y0, x1, y1;
 
   scanf("%d", &N);
 
@@ -18,6 +16,8 @@ void main() {
   av_y1 = y + h;
 
   for (int n=1; n<N; n++) {
+    int x0, y0, x1, y1;
+
     scanf("%d %d %d %d", &x, &y, &w, &h);
     x0 = x - w;
     y0 = y - h;
