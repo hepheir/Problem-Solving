@@ -7,12 +7,6 @@ class Point:
         self.x = x
         self.y = y
 
-    def __str__(self) -> str:
-        return f'{str(self.x)}, {str(self.y)}'
-    
-    def __repr__(self) -> str:
-        return self.__str__()
-
 
 class Line:
     def __init__(self, x0: int, y0: int, x1: int, y1: int):
@@ -21,12 +15,6 @@ class Line:
         self.y = (y0, y1)
         self.parent = None
         self.subtree_size = 1
-
-    def __str__(self):
-        return str(self.p)
-
-    def __repr__(self) -> str:
-        return self.__str__()
 
 
 def CCW(l: Line, p: Point) -> int:
@@ -55,29 +43,29 @@ def meets(l1: Line, l2: Line) -> bool:
         return True
     return c1 <= 0 and c2 <= 0
 
+def find_ancestor(line:Line) -> Line:
+    while line.parent is not None:
+        line = line.parent
+    return line
+
 if __name__ == "__main__":
     N = int(input())
     lines = []
     for n in range(N):
         new_line = Line(*map(int, input().split()))
-        lines.append(new_line)
-    for i in range(N-1):
-        for j in range(i+1, N):
-            l1 = lines[i]
-            l2 = lines[j]
-            if l1 is l2:
+        for old_line in lines:
+            new_ancestor = find_ancestor(new_line)
+            old_ancestor = find_ancestor(old_line)
+            if new_ancestor is old_ancestor:
                 continue
-            if meets(l1, l2):
-                while l1.parent is not None:
-                    l1 = l1.parent
-                while l2.parent is not None:
-                    l2 = l2.parent
-                l1.parent = l2
-                l2.subtree_size += l1.subtree_size
+            if meets(new_line, old_line):
+                new_ancestor.parent = old_ancestor
+                old_ancestor.subtree_size += new_ancestor.subtree_size
+        lines.append(new_line)
     roots = 0
     max_size = 0
     for line in lines:
-        if line.parent is None:
+        if line is find_ancestor(line):
             roots += 1
             max_size = max(max_size, line.subtree_size)
     print(roots)
