@@ -1,13 +1,6 @@
-counter = dict()
+from collections import Counter
 
-for char in input().upper():
-    if char not in counter:
-        counter[char] = 0
-    counter[char] += 1
+c = Counter(input().upper())
+mc = c.most_common(2)
 
-sorted_counter = sorted(counter, key=lambda x: counter[x], reverse=True)
-
-if len(counter) > 1 and (counter[sorted_counter[0]] == counter[sorted_counter[1]]):
-    print('?')
-else:
-    print(sorted_counter[0])
+print('?' if (len(mc) == 2 and mc[0][1] == mc[1][1]) else mc[0][0])
