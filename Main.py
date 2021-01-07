@@ -40,10 +40,10 @@ class Main:
         print(maxsize)
 
     def find_ancestor(self, line: LineId) -> LineId:
-        if self.parents[line] != line:
-            return self.find_ancestor(self.parents[line])
-
-        return line
+        if self.parents[line] == line:
+            return line
+        self.parents[line] = self.find_ancestor(self.parents[line])
+        return self.parents[line]
 
     def is_root(self, line: LineId) -> bool:
         return line == self.find_ancestor(line)
@@ -64,14 +64,12 @@ class Main:
             *self.lines[line1][2:]
         )
         # 일직선 상에 놓인경우, 직선이 곂치는지 검사
-        if c1 * c2 == 0:
+        if c1 == c2 == 0:
+            if self.lines[line1][0] > self.lines[line2][0]:
+                line1, line2 = line2, line1
             if max(self.lines[line1][::2]) < min(self.lines[line2][::2]):
                 return False
-            if max(self.lines[line2][::2]) < min(self.lines[line1][::2]):
-                return False
             if max(self.lines[line1][1::2]) < min(self.lines[line2][1::2]):
-                return False
-            if max(self.lines[line2][1::2]) < min(self.lines[line1][1::2]):
                 return False
             return True
         # 그렇지 않은 경우, 교차하는지 검사
