@@ -2,71 +2,81 @@ import sys
 input = sys.stdin.readline
 
 
-class Point:
-    def __init__(self, x: int, y: int):
-        self.x = x
-        self.y = y
+class Lines:
+    def __init__(self, n_of_lines: int):
+        self.x0 = [None] * n_of_lines
+        self.y0 = [None] * n_of_lines
+        self.x1 = [None] * n_of_lines
+        self.y1 = [None] * n_of_lines
+        self.parent = [None] * n_of_lines
+        self.subtree_size = [1] * n_of_lines
+        self.pointer = 0
 
+    def append(self, x0: int, y0: int, x1: int, y1: int) -> None:
+        new_line = self.pointer
+        self.x0[new_line] = x0
+        self.y0[new_line] = y0
+        self.x1[new_line] = x1
+        self.y1[new_line] = y1
+        for old_line in range(new_line):
+            new_ancestor = self.find_ancestor(new_line)
+            old_ancestor = self.find_ancestor(old_line)
+            if new_ancestor is old_ancestor:
+                continue
+            if self.meets(new_line, old_line):
+                self.parent[new_ancestor] = old_ancestor
+                self.subtree_size[old_ancestor] += self.subtree_size[new_ancestor]
+        self.pointer += 1
 
-class Line:
-    def __init__(self, x0: int, y0: int, x1: int, y1: int):
-        self.p = (Point(x0, y0), Point(x1, y1))
-        self.x = (x0, x1)
-        self.y = (y0, y1)
-        self.parent = None
-        self.subtree_size = 1
+    def ccw(self, x0: int, y0: int, x1: int, y1: int, x2: int, y2: int) -> None:
+        tmp = (x0*y1 + x1*y2 + x2*y0) - (y0*x1 + y1*x2 + y2*x0)
+        if tmp > 0:
+            return 1
+        if tmp < 0:
+            return -1
+        return 0
 
+    def meets(self, l1: int, l2: int) -> bool:
+        c1 = self.ccw(self.x0[l1], self.y0[l1],
+                      self.x1[l1], self.y1[l1],
+                      self.x0[l2], self.y0[l2]) \
+            * self.ccw(self.x0[l1], self.y0[l1],
+                       self.x1[l1], self.y1[l1],
+                       self.x1[l2], self.y1[l2])
+        c2 = self.ccw(self.x0[l2], self.y0[l2],
+                      self.x1[l2], self.y1[l2],
+                      self.x0[l1], self.y0[l1]) \
+            * self.ccw(self.x0[l2], self.y0[l2],
+                       self.x1[l2], self.y1[l2],
+                       self.x1[l1], self.y1[l1])
+        if c1 * c2 == 0:
+            if max([self.x0[l1], self.x1[l1]]) < min([self.x0[l2], self.x1[l2]]):
+                return False
+            if max([self.x0[l2], self.x1[l2]]) < min([self.x0[l1], self.x1[l1]]):
+                return False
+            if max([self.y0[l1], self.y1[l1]]) < min([self.y0[l2], self.y1[l2]]):
+                return False
+            if max([self.y0[l2], self.y1[l2]]) < min([self.y0[l1], self.y1[l1]]):
+                return False
+            return True
+        return c1 <= 0 and c2 <= 0
 
-def CCW(l: Line, p: Point) -> int:
-    # Line 기준 Point가 왼쪽인지 오른쪽인지 판별
-    tmp = (l.x[0]*l.y[1] + l.x[1]*p.y + p.x*l.y[0]) \
-        - (l.y[0]*l.x[1] + l.y[1]*p.x + p.y*l.x[0])
-    if tmp > 0:
-        return 1
-    if tmp < 0:
-        return -1
-    return 0
+    def find_ancestor(self, line: int) -> int:
+        while self.parent[line] is not None:
+            line = self.parent[line]
+        return line
 
-
-def meets(l1: Line, l2: Line) -> bool:
-    c1 = CCW(l1, l2.p[0]) * CCW(l1, l2.p[1])
-    c2 = CCW(l2, l1.p[0]) * CCW(l2, l1.p[1])
-    if c1 * c2 == 0:
-        if max(l1.x) < min(l2.x):
-            return False
-        if max(l2.x) < min(l1.x):
-            return False
-        if max(l1.y) < min(l2.y):
-            return False
-        if max(l2.y) < min(l1.y):
-            return False
-        return True
-    return c1 <= 0 and c2 <= 0
-
-def find_ancestor(line:Line) -> Line:
-    while line.parent is not None:
-        line = line.parent
-    return line
 
 if __name__ == "__main__":
     N = int(input())
-    lines = []
+    LINES = Lines(N)
     for n in range(N):
-        new_line = Line(*map(int, input().split()))
-        for old_line in lines:
-            new_ancestor = find_ancestor(new_line)
-            old_ancestor = find_ancestor(old_line)
-            if new_ancestor is old_ancestor:
-                continue
-            if meets(new_line, old_line):
-                new_ancestor.parent = old_ancestor
-                old_ancestor.subtree_size += new_ancestor.subtree_size
-        lines.append(new_line)
+        LINES.append(*map(int, input().split()))
     roots = 0
     max_size = 0
-    for line in lines:
-        if line is find_ancestor(line):
+    for line in range(LINES.pointer):
+        if LINES.parent[line] is None:
             roots += 1
-            max_size = max(max_size, line.subtree_size)
+            max_size = max(max_size, LINES.subtree_size[line])
     print(roots)
     print(max_size)
