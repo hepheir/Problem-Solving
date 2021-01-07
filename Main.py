@@ -2,6 +2,12 @@ import sys
 input = sys.stdin.readline
 
 
+X0 = 0
+Y0 = 1
+X1 = 2
+Y1 = 3
+
+
 class Line(list):
     pass
 
@@ -17,9 +23,14 @@ def ccw(x0: int, y0: int, x1: int, y1: int, x2: int, y2: int) -> int:
 class Main:
     def __init__(self):
         self.N = int(input())
-        self.lines = [list(map(int, input().split())) for n in range(self.N)]
         self.parents = [n for n in range(self.N)]
         self.sizes = [1] * self.N
+        self.lines = []
+        for n in range(self.N):
+            new_line = list(map(int, input().split())) 
+            if new_line[0] > new_line[2]:
+                new_line[:2], new_line[2:] = new_line[2:], new_line[:2]
+            self.lines.append(new_line)
 
     def solve(self):
         roots = 0
@@ -30,7 +41,7 @@ class Main:
                 j_parent = self.find_ancestor(j)
                 if i_parent == j_parent:
                     continue
-                if self.does_meet(i, j):
+                if self.does_intersect(i, j):
                     self.merge_groups(j, i)
         for line in range(self.N):
             if self.is_root(line):
@@ -47,16 +58,17 @@ class Main:
 
     def is_root(self, line: LineId) -> bool:
         return line == self.find_ancestor(line)
+            
 
-    def does_meet(self, line1: int, line2: int) -> bool:
-        c1 = ccw(
+    def does_intersect(self, line1: LineId, line2: LineId) -> bool:
+        l1_l2 = ccw(
             *self.lines[line1],
             *self.lines[line2][:2]
         ) * ccw(
             *self.lines[line1],
             *self.lines[line2][2:]
         )
-        c2 = ccw(
+        l2_l1 = ccw(
             *self.lines[line2],
             *self.lines[line1][:2]
         ) * ccw(
@@ -64,17 +76,13 @@ class Main:
             *self.lines[line1][2:]
         )
         # 일직선 상에 놓인경우, 직선이 곂치는지 검사
-        if c1 == c2 == 0:
-            if self.lines[line1][0] > self.lines[line2][0]:
+        if l1_l2 == l2_l1 == 0:
+            if self.lines[line1][X0] > self.lines[line2][X0]:
                 line1, line2 = line2, line1
-            if max(self.lines[line1][::2]) < min(self.lines[line2][::2]):
-                return False
-            if max(self.lines[line1][1::2]) < min(self.lines[line2][1::2]):
-                return False
-            return True
+            return (self.lines[line1][X1] >= self.lines[line2][X0]) and (self.lines[line1][Y1] >= self.lines[line2][Y0])
         # 그렇지 않은 경우, 교차하는지 검사
         else:
-            return c1 <= 0 and c2 <= 0
+            return (l1_l2 <= 0) and (l2_l1 <= 0)
 
     def merge_groups(self, line1: LineId, line2: LineId):
         line1_parent = self.find_ancestor(line1)
