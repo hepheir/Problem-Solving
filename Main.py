@@ -42,6 +42,7 @@ class Main:
     def find_ancestor(self, line: LineId) -> LineId:
         if self.parents[line] != line:
             return self.find_ancestor(self.parents[line])
+
         return line
 
     def is_root(self, line: LineId) -> bool:
@@ -77,11 +78,14 @@ class Main:
         else:
             return c1 <= 0 and c2 <= 0
 
-    def merge_groups(self, src: LineId, dst: LineId):
-        src_parent = self.find_ancestor(src)
-        dst_parent = self.find_ancestor(dst)
-        self.parents[src_parent] = dst_parent
-        self.sizes[dst_parent] += self.sizes[src_parent]
+    def merge_groups(self, line1: LineId, line2: LineId):
+        line1_parent = self.find_ancestor(line1)
+        line2_parent = self.find_ancestor(line2)
+        # 트리의 사이클 발생으로 인한 무한 루프 방지
+        if line1_parent > line2_parent:
+            line1_parent, line2_parent = line2_parent, line1_parent
+        self.parents[line2_parent] = line1_parent
+        self.sizes[line1_parent] += self.sizes[line2_parent]
 
 
 if __name__ == "__main__":
