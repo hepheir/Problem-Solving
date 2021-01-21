@@ -1,0 +1,1 @@
+import sys;print('\n'.join(map(str,sorted(map(int,sys.stdin.readlines()[1:])))))
