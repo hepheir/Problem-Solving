@@ -3,7 +3,7 @@ import math
 import collections
 
 # WARNING THIS IS FOR DEBUGGING
-sys.stdin = open(f'20000/20672/data/boj.sample.{1}.in', 'r')
+sys.stdin = open(f'20000/20672/data/boj.sample.{2}.in', 'r')
 
 def children(node, parent):
     for child in graph[node]:
@@ -69,43 +69,48 @@ def is_leaf(node, parent):
     return (parent) and (len(graph[node]) == 1)
 
 
-def solve(node, parent, state, cheatkey, multiverses):
+def update_log(node, log=tuple()):
+    return log+(g[node],)
+
+
+def solve(node, parent, state, cheatkey, multiverses, log=tuple()):
     if is_leaf(node, parent):
         if state != 2:
             cheatkey = update_cheatkey(node, cheatkey)
+            log = update_log(node, log)
         answer[node] += cheatkey * multiverses
-        print(f'e:{node:<2d} c:{cheatkey:<3d} m:{multiverses:<4d}')
+        print(f'e:{node:<2d} c:{cheatkey:<10d} m:{multiverses:<4d} {str(log)}')
         return
     if state == -1:
         # (o)
         for child in children(node, parent):
-            solve(child, node, 0, g[node], 1)
-            solve(child, node, 2, g[node], 1)
+            solve(child, node, 0, g[node], 1, update_log(node))
+            solve(child, node, 2, g[node], 1, update_log(node))
         return
     if state == 0:
         # (x)
         for child in children(node, parent):
-            solve(child, node, 0, cheatkey, multiverses) # all the others should be 2 state
-            solve(child, node, 2, cheatkey, update_multiverses(False, multiverses, node, parent, child)) # one of the others can be 0 state
+            solve(child, node, 0, cheatkey, multiverses, log) # all the others should be 2 state
+            solve(child, node, 2, cheatkey, update_multiverses(False, multiverses, node, parent, child), log) # one of the others can be 0 state
         # (o)
         cheatkey = update_cheatkey(node, cheatkey)
         for child in children(node, parent):
-            solve(child, node, 1, cheatkey, update_multiverses(True, multiverses, node, parent, child))
-            solve(child, node, 2, cheatkey, update_multiverses(True, multiverses, node, parent, child))
+            solve(child, node, 1, cheatkey, update_multiverses(True, multiverses, node, parent, child), update_log(node, log))
+            solve(child, node, 2, cheatkey, update_multiverses(True, multiverses, node, parent, child), update_log(node, log))
         return
     if state == 1:
         # (x)
         for child in children(node, parent):
-            solve(child, node, 2, cheatkey, multiverses)
+            solve(child, node, 2, cheatkey, multiverses, log)
         # (o)
         cheatkey = update_cheatkey(node, cheatkey)
         for child in children(node, parent):
-            solve(child, node, 1, cheatkey, update_multiverses(True, multiverses, node, parent, child))
+            solve(child, node, 1, cheatkey, update_multiverses(True, multiverses, node, parent, child), update_log(node, log))
         return
     if state == 2:
         # (x)
         for child in children(node, parent):
-            solve(child, node, 2, cheatkey, multiverses)
+            solve(child, node, 2, cheatkey, multiverses, log)
         return
 
 
@@ -132,6 +137,6 @@ solve(1, 0, -1, 0, 0)
 # multiverses: 0 (initial value)
 
 
-print(*(answer[node] for node in sorted(answer)))
+print(*(answer[node]%MOD for node in sorted(answer)))
 
 pass
