@@ -6,7 +6,7 @@ import functools
 sys.setrecursionlimit(10**6)
 
 # WARNING THIS IS FOR DEBUGGING
-sys.stdin = open(f'20000/20672/data/boj.sample.{2}.in', 'r')
+sys.stdin = open('20000/20672/data/boj.sait2000.in', 'r')
 
 MOD = 10**9+7
 

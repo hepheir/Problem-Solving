@@ -2,7 +2,7 @@ import sys
 import math
 
 # WARNING THIS IS FOR DEBUGGING
-sys.stdin = open(f'20000/20672/data/boj.sample.{2}.in', 'r')
+sys.stdin = open(f'20000/20672/data/boj.sample.{1}.in', 'r')
 
 
 MOD = 10**9+7
