@@ -27,7 +27,11 @@ class Tree:
             self.graph[u].append(v)
             self.graph[v].append(u)
         self.make_subtree(1)
-        self.bfs(1)
+        # self.bfs(1)
+
+        first_child = next(self.get_children(1))
+        self.dfs(first_child, CHECKED, NOT_CLOSED, self.g[1])
+        self.dfs(first_child, NOT_CHECKED, NOT_CLOSED, self.g[1])
 
     def make_subtree(self, node):
         for child in self.get_children(node):
@@ -85,6 +89,30 @@ class Tree:
             for sibling in self.get_siblings(child):
                 retval += self.estimate_othercases(sibling, CHECKED, NOT_CLOSED)
             return retval
+
+    def dfs(self, node, is_checked, is_closed, cheatkey):
+        if is_checked == CHECKED: # (?) -> ... -> (o) -> opened
+            assert is_closed == NOT_CLOSED
+            cheatkey = math.gcd(self.g[node], cheatkey)
+            for child in self.get_children(node):
+                for _ in range(self.othercases(child, is_parent_checked=CHECKED)):
+                    self.dfs(child, CHECKED, NOT_CLOSED, cheatkey)
+                    self.dfs(child, NOT_CHECKED, CLOSED, cheatkey)
+
+        elif is_closed == CLOSED: # (o) -> ... -> (x) -> closed
+            for child in self.get_children(node):
+                self.dfs(child, NOT_CHECKED, CLOSED, cheatkey)
+
+        else: # (x) -> ... -> (x) -> opened
+            for child in self.get_children(node):
+                for _ in range(self.othercases(child, is_parent_checked=NOT_CHECKED)):
+                    self.dfs(child, NOT_CHECKED, CLOSED, cheatkey)
+                self.dfs(child, CHECKED, NOT_CLOSED, cheatkey)
+                self.dfs(child, NOT_CHECKED, NOT_CLOSED, cheatkey)
+
+        if self.is_leaf(node):
+            self.answer[node] += cheatkey
+
     
     def bfs(self, root):
         first_child = next(self.get_children(root))
@@ -95,6 +123,7 @@ class Tree:
             node, is_checked, is_closed, cheatkey = deque.popleft()
 
             if is_checked == CHECKED: # (?) -> ... -> (o) -> opened
+                assert is_closed == NOT_CLOSED
                 cheatkey = math.gcd(self.g[node], cheatkey)
                 for child in self.get_children(node):
                     for _ in range(self.othercases(child, is_parent_checked=CHECKED)):
