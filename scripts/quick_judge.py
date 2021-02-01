@@ -15,7 +15,10 @@ problem_path = os.path.join(str(pid//1000*1000), str(pid))
 source = os.path.join(problem_path, DEFAULT_SOURCE)
 data = os.path.join(problem_path, DEFAULT_DATA)
 
-for data_in, data_out in zip(*map(lambda ext: glob.glob(os.path.join(data,'*'+ext)), ['.in', '.out'])):
+data_in_list = glob.glob(os.path.join(data,'*in*'))
+data_out_list = glob.glob(os.path.join(data,'*out*'))
+
+for data_in, data_out in zip(data_in_list, data_out_list):
     with open(TMP_STDOUT, 'w') as stdout:
         verdict = ''
         try:
