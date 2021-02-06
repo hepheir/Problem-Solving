@@ -2,9 +2,8 @@
 
 Baekjoon Online Judge 문제를 풀이하는데 사용한 소스 저장소입니다.
 
-![link/user/boj][badge/profile]
-<br>
-![link/user/sac][card/rank]
+[![badge/profile]][link/user/boj]  
+[![card/rank]][link/user/sac]
 
 <!-- References -->
 [link/user/boj]: https://acmicpc.net/user/hepheir
