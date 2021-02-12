@@ -19,7 +19,7 @@ def find_innerHtml(html, tag_opening):
         return ''
     start += len(tag_opening)
     end = html.find(tag_closing, start)
-    return html[start:end]
+    return html[start:end].rstrip()
 
 
 def find_sample_data(html):
