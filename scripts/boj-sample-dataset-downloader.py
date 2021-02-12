@@ -1,10 +1,11 @@
 import os
 import sys
 import ssl
+import typing
 import urllib.request
 
 
-def find_innerHtml(html, tag_opening):
+def find_innerHtml(html:str, tag_opening:str) -> str:
     # Construct tag closing
     tmp = tag_opening.split()
     tmp_hasAttributes = len(tmp) > 1
@@ -22,12 +23,14 @@ def find_innerHtml(html, tag_opening):
     return html[start:end].rstrip()
 
 
-def find_sample_data(html):
+def find_sample_data(html:str) -> typing.Iterator[typing.Tuple[str, str]]:
     for i in range(1, 10):
         sample_in = find_innerHtml(html, f'<pre class="sampledata" id="sample-input-{i}">')
         sample_out = find_innerHtml(html, f'<pre class="sampledata" id="sample-output-{i}">')
         if not sample_in:
             break
+        sample_in = sample_in.replace('\r\n', '\n')
+        sample_out = sample_out.replace('\r\n', '\n')
         yield sample_in, sample_out
 
 
