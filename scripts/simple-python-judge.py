@@ -64,7 +64,7 @@ def judge_problem(
                 data = [
                     f'{verdict:10s}',
                     f'{took:7.0f} ms' if took is not None else ' '*10,
-                    os.path.basename(data_in),
+                    data_in,
                 ]
                 print('\t'.join(data))
     os.remove(TMP_STDOUT)
@@ -81,6 +81,6 @@ if __name__ == '__main__':
         print(f'선택된 파일: {source_path}')
         print('='*40)
     data_path = os.path.join(problem_path, 'data')
-    data_in_list = glob.glob(os.path.join(data_path,'*.in'))
-    data_out_list = glob.glob(os.path.join(data_path,'*.out'))
+    data_in_list = glob.glob(os.path.join(data_path, '**','*.in'), recursive=True)
+    data_out_list = glob.glob(os.path.join(data_path, '**','*.out'), recursive=True)
     judge_problem(source_path, data_in_list, data_out_list)

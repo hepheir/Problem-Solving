@@ -34,7 +34,7 @@ def find_sample_data(html):
 if __name__ == '__main__':
     pid = int(sys.argv[1] if len(sys.argv) >= 2 else input('문제 번호: '))
     problem_path = os.path.join('problem', str(pid))
-    data_path = os.path.join(problem_path, 'data')
+    data_path = os.path.join(problem_path, 'data', 'boj', 'sample')
 
     if not os.path.exists(data_path):
         os.makedirs(data_path)
@@ -48,10 +48,10 @@ if __name__ == '__main__':
             idx += 1
             print(f'[INFO] 데이터 셋 생성 중... {idx}')
 
-            with open(os.path.join(data_path, f'boj.sample.{idx}.in'), 'w') as f:
+            with open(os.path.join(data_path, f'{idx}.in'), 'w') as f:
                 f.write(data_in)
 
-            with open(os.path.join(data_path, f'boj.sample.{idx}.out'), 'w') as f:
+            with open(os.path.join(data_path, f'{idx}.out'), 'w') as f:
                 f.write(data_out)
     
     print('[INFO]', '데이터 셋 생성완료.')
