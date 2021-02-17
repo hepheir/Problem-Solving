@@ -36,16 +36,18 @@ def find_sample_data(html:str) -> typing.Iterator[typing.Tuple[str, str]]:
 
 if __name__ == '__main__':
     pid = int(sys.argv[1] if len(sys.argv) >= 2 else input('문제 번호: '))
-    problem_path = os.path.join('problem', str(pid))
-    data_path = os.path.join(problem_path, 'data', 'boj', 'sample')
-
-    if not os.path.exists(data_path):
-        os.makedirs(data_path)
 
     with urllib.request.urlopen(f'https://acmicpc.net/problem/{pid}', context=ssl.SSLContext()) as https:
         html = https.read().decode('utf-8')
 
-        print('[INFO] 제목:', find_innerHtml(html, '<span id="problem_title">'))
+        title = find_innerHtml(html, '<span id="problem_title">')
+        print('[INFO] :', f'{pid} {title}')
+
+        problem_path = os.path.join('problem', f'{pid} {title}')
+        data_path = os.path.join(problem_path, 'data', 'boj', 'sample')
+
+        if not os.path.exists(data_path):
+            os.makedirs(data_path)
 
         for idx, (data_in, data_out) in enumerate(find_sample_data(html)):
             idx += 1
