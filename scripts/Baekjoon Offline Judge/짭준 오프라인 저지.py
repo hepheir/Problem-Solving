@@ -153,6 +153,8 @@ if __name__ == '__main__':
     except:
         Log.info('경로를 찾지 못하였습니다.')
         exit(1)
+
+    if not os.path.exists(TMP_PATH): os.makedirs(TMP_PATH)
     
     din = glob.glob(os.path.join(args.data, '**', '*.in'), recursive=True)
     dout = glob.glob(os.path.join(args.data, '**', '*.out'), recursive=True)
