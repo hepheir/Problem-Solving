@@ -2,60 +2,105 @@
 문제 폴더내에 있는 파이썬 코드에 대하여
 간단한 채점을 시행하여 실행 시간과 채점 결과를 보여줍니다.
 
-사용법: simple-python-judge.py [문제번호] [파일이름]
-    - 문제번호: 생략시 콘솔에서 입력 받는 prompt가 나옴
-    - 파일이름: 생략시 기본 값은 ".py"
+사용법:simple-python-judge.py [문제번호] [파일이름]
+    - 문제번호:생략시 콘솔에서 입력 받는 prompt가 나옴
+    - 파일이름:생략시 기본 값은 ".py"
 """
 
-import subprocess
-import os
+import argparse
 import glob
-import sys
+import os
+import shutil
+import subprocess
 import time
 import typing
 
-DEFAULT_TIMEOUT = 10
-TMP_STDOUT = 'tmp.stdout'
-BAR_SIZE = 48
+TMP_PATH = 'tmp'
 
-################################################################################
-# 파일 폴더 패턴에 따라 아래 함수를 수정하여 사용
-################################################################################
 
-def get_problem_path(pid:int) -> os.PathLike:
-    return os.path.join('problem', str(pid))
+class Python3:
+    BACKUP_PATH = os.path.join(TMP_PATH, 'tmp.py')
 
-################################################################################
+    @classmethod
+    def compile(cls, src:os.PathLike):
+        shutil.copyfile(src, cls.BACKUP_PATH)
+        subprocess.run(['python3' ,'-c', f'"import py_compile; py_compile.compile(r\'{cls.BACKUP_PATH}\')"'])
 
-def judge_brief(verdict:str='', took:float=0, data_in_path:os.PathLike='', end='\n'):
-    data = [
-        f'{verdict:10s}',
-        f'{took:7.0f} ms' if took is not None else ' '*10,
-        data_in_path,
-    ]
-    print('[INFO] '+'\t'.join(data), end=end)
+    @classmethod
+    def run(cls, src:os.PathLike, stdin:os.PathLike, stdout:os.PathLike, timeout:float = 10):
+        subprocess.run(f'''python3 "{src}"''',
+                       stdin=open(stdin, 'r'),
+                       stdout=open(stdout, 'w'),
+                       timeout=timeout,
+                       check=True)
 
-def judge_problem(
-        source_file:os.PathLike,
-        input_files:typing.List[os.PathLike],
-        output_files:typing.List[os.PathLike]
-    ):
-    for data_in, data_out in zip(input_files, output_files):
-        with open(TMP_STDOUT, 'w') as stdout:
-            judge_brief(verdict='채점중...', data_in_path=data_in, end='\r')
-            verdict = ''
+
+class Cpp:
+    COMPILER_PATH = 'c:\\MinGW\\bin\\g++.exe'
+    BACKUP_PATH = os.path.join(TMP_PATH, 'tmp.cpp')
+    OUTPUT_PATH = os.path.join(TMP_PATH, 'tmp.exe')
+
+    @classmethod
+    def compile(cls, src:os.PathLike):
+        shutil.copyfile(src, cls.BACKUP_PATH)
+        subprocess.run([cls.COMPILER_PATH, "-g", cls.BACKUP_PATH, "-o", cls.OUTPUT_PATH])
+
+    @classmethod
+    def run(cls, src:os.PathLike, stdin:os.PathLike, stdout:os.PathLike, timeout:float = 5):
+        subprocess.run(
+            cls.OUTPUT_PATH,
+            stdin=open(stdin, 'r'),
+            stdout=open(stdout, 'w'),
+            timeout=timeout,
+            check=True
+        )
+
+
+class Log:
+    PREFIX = '[INFO] '
+    BAR_SIZE = 56
+    CELL_WIDTH = 10
+
+    @classmethod
+    def info(cls, *args, **kwargs):
+        print(cls.PREFIX+'\t'.join(map(lambda x:f'{str(x):{cls.CELL_WIDTH}s}', args)), **kwargs)
+
+    @classmethod
+    def bar(cls):
+        print(cls.PREFIX + '='*cls.BAR_SIZE)
+
+
+class Judge:
+    TMP_STDOUT = os.path.join(TMP_PATH, 'tmp.stdout')
+
+    @classmethod
+    def detect_language(cls, src):
+        ext = os.path.splitext(src)[1]
+        if ext == '.py':
+            return Python3
+        if ext == '.cpp':
+            return Cpp
+        return None
+
+    @classmethod
+    def test(cls, src:os.PathLike, din:typing.List[os.PathLike], dout:typing.List[os.PathLike]):
+        lang = cls.detect_language(src)
+        for data_in, data_out in zip(din, dout):
+            verdict = None
             took = None
+            Log.info('채점중...', data_in, end='\r')
             try:
+                # Compile
+                lang.compile(src)
+
+                # Run & Check time
                 time_start = time.time()
-                subprocess.run(f'''python3 -c "import py_compile; py_compile.compile(r'{source_file}')"''')
-                subprocess.run(f'''python3 "{source_file}"''',
-                                stdin=open(data_in,'r'),
-                                stdout=stdout,
-                                timeout=DEFAULT_TIMEOUT,
-                                check=True)
+                lang.run(src, data_in, cls.TMP_STDOUT)
                 time_end = time.time()
-                took =(time_end-time_start) * 1000
-                with open(data_out, 'r') as ans_stdout, open(TMP_STDOUT, 'r') as usr_stdout:
+
+            # Judge a case
+                took = (time_end-time_start) * 1000
+                with open(data_out, 'r') as ans_stdout, open(cls.TMP_STDOUT, 'r') as usr_stdout:
                     ans = ans_stdout.read().rstrip()
                     usr = usr_stdout.read().rstrip()
                     if ans == usr:
@@ -70,26 +115,46 @@ def judge_problem(
                 verdict = '런타임 에러'
             except MemoryError: # TODO
                 verdict = '메모리 초과'
-            except BaseException as err:
-                print(err)
+            except BaseException as error:
+                raise error # 아마 컴파일 과정중 에러
             finally:
-                judge_brief(verdict, took, data_in)
-    print('[INFO] '+'='*BAR_SIZE)
-    print('[INFO] 채점 완료')
-    os.remove(TMP_STDOUT)
+                brief_result = verdict if (verdict is not None) else ''
+                brief_time = f'{took:7.0f} ms' if (took is not None) else ''
+                brief_data = os.path.join('...', *os.path.split(data_in)[-5:])
+                Log.info(brief_result, brief_time, brief_data)
+        # Fin.
+        Log.bar()
+        Log.info('채점 완료')
+
 
 if __name__ == '__main__':
-    pid = int(sys.argv[1] if len(sys.argv) >= 2 else input('[INFO] 문제 번호: '))
-    problem_path = get_problem_path(pid)
-    source_path = os.path.join(problem_path, sys.argv[2] if len(sys.argv) >= 3 else '.py')
-    if not os.path.exists(source_path):
-        print(f'[INFO] 소스 파일을 발견하지 못하였습니다. ["{source_path}" does not exist]')
+    parser = argparse.ArgumentParser(
+'''
+:: Baekjoon Offline Judge ::
+
+* 짭준 오프라인 저지.
+  당신의 채점 결과를 예측해 드립니다.
+
+''',
+        usage='<source file> <dataset dir>'
+    )
+    parser.add_argument('src', help='작성한 소스코드의 경로')
+    parser.add_argument('data', help='[.in .out]형식으로 저장된 데이터 셋이 들어있는 폴더 경로')
+
+    args = parser.parse_args()
+    
+    Log.bar()
+    Log.info('선택된 파일:', args.src)
+    Log.bar()
+
+    try:
+        assert os.path.exists(args.src)
+        assert os.path.exists(args.data)
+    except:
+        Log.info('경로를 찾지 못하였습니다.')
         exit(1)
-    else:
-        print('[INFO] '+'='*BAR_SIZE)
-        print(f'[INFO] 선택된 파일: {source_path}')
-        print('[INFO] '+'='*BAR_SIZE)
-    data_path = os.path.join(problem_path, 'data')
-    data_in_list = glob.glob(os.path.join(data_path, '**','*.in'), recursive=True)
-    data_out_list = glob.glob(os.path.join(data_path, '**','*.out'), recursive=True)
-    judge_problem(source_path, data_in_list, data_out_list)
+    
+    din = glob.glob(os.path.join(args.data, '**', '*.in'), recursive=True)
+    dout = glob.glob(os.path.join(args.data, '**', '*.out'), recursive=True)
+
+    Judge.test(args.src, din, dout)
