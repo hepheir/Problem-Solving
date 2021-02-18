@@ -1,0 +1,1 @@
+javascript:(()=>{const solution = document.getElementById('status-table').getElementsByTagName('tr')[1];const cells = solution.getElementsByTagName('td');const id = cells[0].innerText;const result = cells[3].innerText;const memory = cells[4].innerText;const time = cells[5].innerText;alert(`${id} ${result} ${memory} KB ${time} ms`);})();
