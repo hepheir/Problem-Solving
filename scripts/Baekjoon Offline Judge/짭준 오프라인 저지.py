@@ -127,6 +127,11 @@ class Judge:
         Log.info('채점 완료')
 
 
+def check_required_path_exists(path:os.PathLike):
+    if not os.path.exists(path):
+        Log.info('경로를 찾지 못하였습니다.', path)
+        exit(1)
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
 '''
@@ -147,12 +152,8 @@ if __name__ == '__main__':
     Log.info('선택된 파일:', args.src)
     Log.bar()
 
-    try:
-        assert os.path.exists(args.src)
-        assert os.path.exists(args.data)
-    except:
-        Log.info('경로를 찾지 못하였습니다.')
-        exit(1)
+    check_required_path_exists(args.src)
+    check_required_path_exists(args.data)
 
     if not os.path.exists(TMP_PATH): os.makedirs(TMP_PATH)
     
