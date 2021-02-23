@@ -76,6 +76,8 @@ class Judge:
     @classmethod
     def detect_language(cls, src):
         ext = os.path.splitext(src)[1]
+        if not ext:
+            ext = os.path.basename(src)
         if ext == '.py':
             return Python3
         if ext == '.cpp':
