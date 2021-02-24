@@ -1,6 +1,7 @@
 import os
-import sys
 import ssl
+import subprocess
+import sys
 import typing
 import urllib.request
 
@@ -60,4 +61,6 @@ if __name__ == '__main__':
                 f.write(data_out)
     
     print('[INFO]', '데이터 셋 생성완료.')
-    print(problem_path)
+    
+    subprocess.run(f'git add "{problem_path}"')
+    print('[INFO]', f'Git added "{problem_path}"')
