@@ -88,9 +88,10 @@ class Judge:
     def test(cls, src:os.PathLike, din:typing.List[os.PathLike], dout:typing.List[os.PathLike]):
         lang = cls.detect_language(src)
         for data_in, data_out in zip(din, dout):
+            shorted_data_in = data_in.replace(os.path.commonpath([src, data_in]), '...')
             verdict = None
             took = None
-            Log.info('채점중...', data_in, end='\r')
+            Log.info('채점중...', shorted_data_in, end='\r')
             try:
                 # Compile
                 lang.compile(src)
@@ -122,7 +123,7 @@ class Judge:
             finally:
                 brief_result = verdict if (verdict is not None) else ''
                 brief_time = f'{took:7.0f} ms' if (took is not None) else ''
-                brief_data = os.path.join('...', *os.path.split(data_in)[-5:])
+                brief_data = shorted_data_in
                 Log.info(brief_result, brief_time, brief_data)
         # Fin.
         Log.bar()
