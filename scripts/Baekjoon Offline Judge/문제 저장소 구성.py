@@ -62,5 +62,6 @@ if __name__ == '__main__':
     
     print('[INFO]', '데이터 셋 생성완료.')
     
-    subprocess.run(f'git add "{problem_path}"')
-    print('[INFO]', f'Git added "{problem_path}"')
+    subprocess.run(f'git add "{data_path}"')
+    subprocess.run(f'git commit -m "{pid}번 데이터 셋 추가"')
+
