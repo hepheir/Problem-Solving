@@ -24,7 +24,11 @@ class Python3:
     @classmethod
     def compile(cls, src:os.PathLike):
         shutil.copyfile(src, cls.BACKUP_PATH)
-        subprocess.run(['python3' ,'-c', f'"import py_compile; py_compile.compile(r\'{cls.BACKUP_PATH}\')"'])
+        subprocess.run([
+                'python3',
+                '-c',
+                f'"import py_compile; py_compile.compile(r\'{cls.BACKUP_PATH}\')"'
+            ])
 
     @classmethod
     def run(cls, src:os.PathLike, stdin:os.PathLike, stdout:os.PathLike, timeout:float = 10):
@@ -43,10 +47,16 @@ class Cpp:
     @classmethod
     def compile(cls, src:os.PathLike):
         shutil.copyfile(src, cls.BACKUP_PATH)
-        subprocess.run([cls.COMPILER_PATH, "-g", cls.BACKUP_PATH, "-o", cls.OUTPUT_PATH])
+        subprocess.run([
+                cls.COMPILER_PATH,
+                "-g",
+                cls.BACKUP_PATH,
+                "-o",
+                cls.OUTPUT_PATH
+            ])
 
     @classmethod
-    def run(cls, src:os.PathLike, stdin:os.PathLike, stdout:os.PathLike, timeout:float = 5):
+    def run(cls, src:os.PathLike, stdin:os.PathLike, stdout:os.PathLike, timeout:float=5):
         subprocess.run(
             cls.OUTPUT_PATH,
             stdin=open(stdin, 'r'),
@@ -91,18 +101,21 @@ class Judge:
             shorted_data_in = data_in.replace(os.path.commonpath([src, data_in]), '...')
             verdict = None
             took = None
-            Log.info('채점중...', shorted_data_in, end='\r')
+
+            Log.info('채점 중...', shorted_data_in, end='\r')
             try:
                 # Compile
                 lang.compile(src)
 
                 # Run & Check time
                 time_start = time.time()
-                lang.run(src, data_in, cls.TMP_STDOUT)
-                time_end = time.time()
 
-            # Judge a case
+                lang.run(src, data_in, cls.TMP_STDOUT)
+                
+                time_end = time.time()
                 took = (time_end-time_start) * 1000
+                
+                # Judge
                 with open(data_out, 'r') as ans_stdout, open(cls.TMP_STDOUT, 'r') as usr_stdout:
                     ans = ans_stdout.read().rstrip()
                     usr = usr_stdout.read().rstrip()
@@ -119,7 +132,7 @@ class Judge:
             except MemoryError: # TODO
                 verdict = '메모리 초과'
             except BaseException as error:
-                raise error # 아마 컴파일 과정중 에러
+                raise error # 알 수 없는 에러 (버그 제보 부탁)
             finally:
                 brief_result = verdict if (verdict is not None) else ''
                 brief_time = f'{took:7.0f} ms' if (took is not None) else ''
