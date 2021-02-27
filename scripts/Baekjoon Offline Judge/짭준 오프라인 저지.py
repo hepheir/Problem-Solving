@@ -28,7 +28,8 @@ class Python3:
                 'python3',
                 '-c',
                 f'"import py_compile; py_compile.compile(r\'{cls.BACKUP_PATH}\')"'
-            ])
+            ],
+            check=True)
 
     @classmethod
     def run(cls, src:os.PathLike, stdin:os.PathLike, stdout:os.PathLike, timeout:float = 10):
@@ -53,7 +54,8 @@ class Cpp:
                 cls.BACKUP_PATH,
                 "-o",
                 cls.OUTPUT_PATH
-            ])
+            ],
+            check=True)
 
     @classmethod
     def run(cls, src:os.PathLike, stdin:os.PathLike, stdout:os.PathLike, timeout:float=5):
@@ -96,7 +98,19 @@ class Judge:
 
     @classmethod
     def test(cls, src:os.PathLike, din:typing.List[os.PathLike], dout:typing.List[os.PathLike]):
+        Log.info('채점준비중...', end='\r')
         lang = cls.detect_language(src)
+
+        Log.info('컴파일 중...', end='\r')
+        try:
+            # Compile
+            lang.compile(src)
+        except subprocess.CalledProcessError:
+            Log.bar()
+            Log.info('컴파일 에러')
+            Log.bar()
+            return
+
         for data_in, data_out in zip(din, dout):
             shorted_data_in = data_in.replace(os.path.commonpath([src, data_in]), '...')
             verdict = None
@@ -104,9 +118,6 @@ class Judge:
 
             Log.info('채점 중...', shorted_data_in, end='\r')
             try:
-                # Compile
-                lang.compile(src)
-
                 # Run & Check time
                 time_start = time.time()
 
