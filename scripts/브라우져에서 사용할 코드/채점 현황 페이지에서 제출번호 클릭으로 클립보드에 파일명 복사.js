@@ -7,11 +7,21 @@ javascript: (() => {
             const verdict = cells[3].innerText;
             const memory = cells[4].innerText;
             const time = cells[5].innerText;
-            
+            const lang = cells[6].innerText;
+
             var result = `${id} ${verdict}`;
             if (verdict  == '맞았습니다!!') {
                 result += ` ${memory} KB ${time} ms`
             }
+
+            if (lang.includes('Python') || lang.includes('PyPy3')) {
+                result += '.py';
+            } else if (lang.includes('Java 11')) {
+                result += '.java'
+            } else if (lang.includes('C++')) {
+                result += '.cpp'
+            }
+
             navigator.clipboard.writeText(result);
         });
     };
