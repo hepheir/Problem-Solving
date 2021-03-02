@@ -1,3 +1,6 @@
 [submodule "util"]
 	path = util
 	url = https://github.com/Hepheir/Utilities-for-BOJ-Solutions
+[submodule "BOJ-Offline-Judge"]
+	path = BOJ-Offline-Judge
+	url = https://github.com/Hepheir/BOJ-Offline-Judge.git
