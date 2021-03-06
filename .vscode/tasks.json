@@ -16,24 +16,13 @@
         },
         {
             "type": "shell",
-            "label": "[BOJ tools] 간채점",
-            "command": "C:/Program Files/Python/Python39/python.exe",
+            "label": "[BOJ-Offline-Judge] 간채점",
+            "command": "python",
             "args": [
-                "${workspaceFolder}${pathSeparator}scripts${pathSeparator}Baekjoon Offline Judge${pathSeparator}짭준 오프라인 저지.py",
-                "${file}",
-                "${fileDirname}${pathSeparator}data",
-            ],
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            }
-        },
-        {
-            "type": "shell",
-            "label": "[BOJ tools] 문제 구성",
-            "command": "C:/Program Files/Python/Python39/python.exe",
-            "args": [
-                "${workspaceFolder}${pathSeparator}scripts${pathSeparator}Baekjoon Offline Judge${pathSeparator}문제 저장소 구성.py"
+                "-m",
+                "boj",
+                "judge",
+                "${file}"
             ],
             "group": {
                 "kind": "test",
