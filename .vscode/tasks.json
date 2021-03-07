@@ -20,14 +20,10 @@
             "command": "python",
             "args": [
                 "-m",
-                "boj",
-                "judge",
+                "boj.judge",
                 "${file}"
             ],
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            }
+            "group": "test"
         }
     ]
 }

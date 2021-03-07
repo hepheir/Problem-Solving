@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Program Files\\Python\\Python39\\python.exe",
+    "python.pythonPath": ".env\\Scripts\\python.exe",
     "files.associations": {
         "iostream": "cpp",
         "algorithm": "cpp",
