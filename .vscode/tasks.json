@@ -16,12 +16,23 @@
         },
         {
             "type": "shell",
-            "label": "[BOJ-Offline-Judge] 간채점",
+            "label": "[BOJ-Offline-Judge] 가채점",
             "command": "python",
             "args": [
                 "-m",
                 "boj.judge",
                 "${file}"
+            ],
+            "group": "test"
+        },
+        {
+            "type": "shell",
+            "label": "[BOJ-Offline-Judge] 문제 저장소 구성",
+            "command": "python",
+            "args": [
+                "-m",
+                "boj",
+                "setup"
             ],
             "group": "test"
         }
