@@ -68,7 +68,7 @@ class Box:
 
 
 
-        def get_growable_nodes(self) -> typing.List[Box.Node]:
+        def get_growable_nodes_list(self) -> typing.List[Box.Node]:
             CheckTime['Box.Node.get_growable_nodes'].start()
             retval = []
             if self.x > 0:
@@ -121,7 +121,7 @@ class Box:
             parent, node = deque.popleft()
             if parent is not None:
                 node.grow_from(parent)
-            for child in node.get_growable_nodes():
+            for child in node.get_growable_nodes_list():
                 if self.is_growable(src=node, dst=child):
                     deque.append((node, child))
         CheckTime['Box.bfs'].end()
