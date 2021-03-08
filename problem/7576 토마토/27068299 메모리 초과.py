@@ -21,11 +21,10 @@ class Box:
             self.y = y
             self.status = tomato_status
             self.passed_days = sys.maxsize
-            self.visited = False
 
 
         def __str__(self) -> str:
-            return f'<Node: stat:{self.status}, days:{self.passed_days}, visited:{self.visited}>'
+            return f'<Node: stat:{self.status}, days:{self.passed_days}>'
 
 
         def __repr__(self) -> str:
@@ -44,11 +43,13 @@ class Box:
 
 
         def grow_from(self, src:Box.Node):
+            assert self.status != TOMATO_STATUS.EMPTY
+            assert src.status == TOMATO_STATUS.MATURE
             self.passed_days = src.passed_days+1
             self.status = TOMATO_STATUS.MATURE
 
     
-    def __init__(self, height:int, width:int, array_1d:typing.Iterable[TOMATO_STATUS]):
+    def __init__(self, width:int, height:int, array_1d:typing.Iterable[TOMATO_STATUS]):
         self.list:typing.List[Box.Node] = [Box.Node(box=self, y=idx//width, x=idx%width, tomato_status=status) for idx, status in enumerate(array_1d)]
         self.height = height
         self.width = width
@@ -60,7 +61,7 @@ class Box:
         return self.list[y*self.width + x]
 
     
-    def is_spreadable(self, src:Box.Node, dst: Box.Node) -> bool:
+    def is_growable(self, src:Box.Node, dst: Box.Node) -> bool:
         if (src.passed_days+1 >= dst.passed_days):
             return False
         if (src.status != TOMATO_STATUS.MATURE):
@@ -71,18 +72,16 @@ class Box:
 
 
     def dfs(self, root: Box.Node):
-        root.visited = True
-        children = list(root.get_growable_nodes())
-        for node in children:
-            if self.is_spreadable(src=root, dst=node):
+        for node in root.get_growable_nodes():
+            if self.is_growable(src=root, dst=node):
                 node.grow_from(root)
                 self.dfs(node)
 
 
-HEIGHT, WIDTH = map(int, sys.stdin.readline().split())
+WIDTH, HEIGHT = map(int, sys.stdin.readline().split())
 ARRAY_ITERABLE = map(int, sys.stdin.read().split())
 
-box = Box(HEIGHT, WIDTH, ARRAY_ITERABLE)
+box = Box(WIDTH, HEIGHT, ARRAY_ITERABLE)
 
 start_at = []
 for node in box.list:
@@ -95,9 +94,10 @@ for node in start_at:
 
 minimun_passed_days = 0
 for node in box.list:
-    if (not node.visited) and (node.status != TOMATO_STATUS.EMPTY):
+    if (node.status == TOMATO_STATUS.IMMATURE):
         print('-1')
         break
-    minimun_passed_days = max(node.passed_days, minimun_passed_days)
+    if (node.status == TOMATO_STATUS.MATURE):
+        minimun_passed_days = max(node.passed_days, minimun_passed_days)
 else:
     print(minimun_passed_days)
