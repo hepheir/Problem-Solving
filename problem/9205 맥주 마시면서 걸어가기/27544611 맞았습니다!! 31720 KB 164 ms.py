@@ -5,7 +5,7 @@ MAX_DISTANCE = 20*50
 
 
 def manhattan_distance(src_x, src_y, dst_x, dst_y):
-    return (dst_x-src_x) + (dst_y-src_y)
+    return abs(dst_x-src_x) + abs(dst_y-src_y)
 
 
 def solve():
@@ -18,7 +18,7 @@ def solve():
         for j in range(N+2):
             if i == j:
                 continue
-            if abs(manhattan_distance(*nodes[i], *nodes[j])) <= MAX_DISTANCE:
+            if manhattan_distance(*nodes[i], *nodes[j]) <= MAX_DISTANCE:
                 graph[i].append(j)
                 graph[j].append(i)
 
