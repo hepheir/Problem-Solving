@@ -23,7 +23,7 @@
                 "boj.judge",
                 "${file}"
             ],
-            "group": "test"
+            "group": "build"
         },
         {
             "type": "shell",
@@ -34,7 +34,7 @@
                 "boj",
                 "setup"
             ],
-            "group": "test"
+            "group": "build"
         }
     ]
 }

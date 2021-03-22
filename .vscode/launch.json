@@ -15,7 +15,7 @@
             "name": "(gdb) 시작",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\a.exe",
+            "program": "${workspaceFolder}${pathSeparator}a.exe",
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
