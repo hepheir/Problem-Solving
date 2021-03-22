@@ -24,6 +24,7 @@ def dfs(y,x):
         return
     visited[y,x] = True
     building_complex[-1] += 1
+    MAP[y][x] = len(building_complex)
     dfs(y, x-1)
     dfs(y, x+1)
     dfs(y-1, x)
@@ -36,4 +37,4 @@ while deque:
         dfs(y, x)
 
 print(len(building_complex))
-print('\n'.join(map(str, building_complex)))
+print('\n'.join(map(str, sorted(building_complex))))
