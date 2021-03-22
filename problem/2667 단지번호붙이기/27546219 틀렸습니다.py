@@ -14,18 +14,20 @@ for y in range(N):
             deque.append((y,x))
 
 def dfs(y,x):
-    if visited[y,x] or not MAP[y][x]:
+    if x < 0 or N <= x:
+        return
+    if y < 0 or N <= y:
+        return
+    if visited[y,x]:
+        return
+    if not MAP[y][x]:
         return
     visited[y,x] = True
     building_complex[-1] += 1
-    if x > 0:
-        dfs(y,x-1)
-    if x < N-1:
-        dfs(y,x+1)
-    if y > 0:
-        dfs(y-1,x)
-    if y < N-1:
-        dfs(y+1,x)
+    dfs(y, x-1)
+    dfs(y, x+1)
+    dfs(y-1, x)
+    dfs(y+1, x)
 
 while deque:
     y, x = deque.popleft()
