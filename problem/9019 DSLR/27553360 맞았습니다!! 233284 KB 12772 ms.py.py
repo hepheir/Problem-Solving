@@ -6,13 +6,13 @@ def D(n):
     return (n << 1) % 10000
 
 def S(n):
-    return n-1
+    return 9999 if( n == 0) else n-1
 
 def L(n):
     return (n * 10 + n // 1000) % 10000
 
 def R(n):
-    return (n % 10) * 1000 + n // 10
+    return ((n % 10) * 1000) + (n // 10)
 
 
 for t in range(int(sys.stdin.readline())):
