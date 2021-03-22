@@ -14,7 +14,7 @@ def dfs(y, x, n):
         dfs(y+n, x,   n),
         dfs(y+n, x+n, n),
     ]
-    if result[0] == result[1] == result[2] == result[3]:
+    if (result[0] in '01') and (result[0] == result[1] == result[2] == result[3]):
         return result[0]
     else:
         return '('+''.join(result)+')'
