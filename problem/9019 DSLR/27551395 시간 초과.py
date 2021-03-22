@@ -28,5 +28,7 @@ for t in range(int(sys.stdin.readline())):
             visited[n] = True
             deque.append((D(n), log+'D'))
             deque.append((S(n), log+'S'))
-            deque.append((L(n), log+'L'))
-            deque.append((R(n), log+'R'))
+            if (not log) or (log[-1] != 'R'):
+                deque.append((L(n), log+'L'))
+            if (not log) or (log[-1] != 'L'):
+                deque.append((R(n), log+'R'))
