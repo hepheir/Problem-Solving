@@ -4,7 +4,7 @@ import sys
 class Queue:
     def __init__(self, *args):
         self.deque = collections.deque(args)
-        self.log = [''] * 10000
+        self.log = [None] * 10000
         self.push = self.deque.append
         self.pop = self.deque.popleft
 
@@ -22,7 +22,7 @@ class Queue:
 
     def visit(self, p, n, log):
         # p로부터 n으로 가는 연산이 log일때, 이를 방문처리하고 큐에 삽입
-        if self.log[n]:
+        if self.log[n] is not None:
             return
         self.log[n] = self.log[p] + log
         self.push(n)
@@ -37,6 +37,7 @@ class Queue:
 for t in range(int(sys.stdin.readline())):
     A, B = map(int, sys.stdin.readline().split())
     queue = Queue(A)
+    queue.log[A] = ''
     while queue:
         n = queue.pop()
         if n == B:
