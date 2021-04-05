@@ -33,10 +33,15 @@ class Node:
 
 
 def solve():
-    root = Node(int(sys.stdin.readline()))
+    root = None
     for x in map(int, sys.stdin.readlines()):
-        root.make(x)
-    root.postorder()
+        if root is None:
+            root = Node(x)
+        else:
+            root.make(x)
+
+    if root is not None:
+        root.postorder()
 
 
 solve()
