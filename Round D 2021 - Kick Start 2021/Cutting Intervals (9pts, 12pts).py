@@ -5,7 +5,7 @@ from collections import Counter
 def main():
     testcases = int(stdin.readline())
 
-    for _ in range(testcases):
+    for t in range(1, testcases+1):
         N, C = map(int, stdin.readline().split())
         L = []
         R = []
@@ -14,7 +14,7 @@ def main():
             L.append(l)
             R.append(r)
         answer = solve(N, C, L, R)
-        print(f'Case #{testcases}: {answer}')
+        print(f'Case #{t}: {answer}')
 
 
 
