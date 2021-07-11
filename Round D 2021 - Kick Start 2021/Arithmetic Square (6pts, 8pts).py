@@ -6,7 +6,7 @@ from collections import Counter
 def main():
     testcases = int(stdin.readline())
 
-    for _ in range(testcases):
+    for t in range(1, testcases+1):
         grid_3x3 = [
             list(map(int, stdin.readline().split())),
             list(map(int, stdin.readline().split())),
@@ -14,7 +14,7 @@ def main():
         ]
         grid_3x3[1].insert(1, None)
         answer = solve(grid_3x3)
-        print(f'Case #{testcases}: {answer}')
+        print(f'Case #{t}: {answer}')
 
 
 
