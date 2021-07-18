@@ -1,3 +1,5 @@
+https://programmers.co.kr/competitions/1472/2021-naver-webtoon-challenge
+
 # 참가 정보
 
 | 이름  | 이메일               | 지원분야                    |
