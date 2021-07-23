@@ -1,54 +1,54 @@
-<h1>1. ¼ûÀº ±×¸² Ã£±â¿Í »ï°¢Çü (5Á¡)</h1>
+<h1>1. ìˆ¨ì€ ê·¸ë¦¼ ì°¾ê¸°ì™€ ì‚¼ê°í˜• (5ì )</h1>
 <!--
     <ul>
-	<li class="0"><span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span style="font-weight:bold">±×¸² Ã£±â¿Í »ï°¢Çü</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span style="letter-spacing:0pt"><span style="font-weight:bold">(5</span></span></span></span><span style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span style="font-weight:bold">Á¡</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span style="letter-spacing:0pt"><span style="font-weight:bold">)</span></span></span></span></span></li>
+	<li class="0"><span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span style="font-weight:bold">ê·¸ë¦¼ ì°¾ê¸°ì™€ ì‚¼ê°í˜•</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span style="letter-spacing:0pt"><span style="font-weight:bold">(5</span></span></span></span><span style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span style="font-weight:bold">ì </span></span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span style="letter-spacing:0pt"><span style="font-weight:bold">)</span></span></span></span></span></li>
 </ul>
 -->
-<span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+<span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">(1) </span></span></span><span style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò">¼ûÀº ±×¸² Ã£±â</span></span><span lang="EN-US" style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò"><span style="letter-spacing:0pt">(2</span></span></span><span
-        style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò">Á¡</span></span><span lang="EN-US"
-        style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+            style="font-family:í•œì»´ë‹ì›€">ìˆ¨ì€ ê·¸ë¦¼ ì°¾ê¸°</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+            style="font-family:í•œì»´ë‹ì›€"><span style="letter-spacing:0pt">(2</span></span></span><span
+        style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€">ì </span></span><span lang="EN-US"
+        style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">)</span></span></span></span><br>
-<span style="font-size:13.0pt"><span style="text-autospace:none"><span style="font-weight:bold"><img alt="±×¸²ÀÔ´Ï´Ù.
-¿øº» ±×¸²ÀÇ ÀÌ¸§: CLP000020f46542.bmp
-¿øº» ±×¸²ÀÇ Å©±â: °¡·Î 947pixel, ¼¼·Î 456pixel" src="./Á¦12È¸ cpsFestival ¿¹¼± ¹®Á¦(¾È)_files/1.png"
+<span style="font-size:13.0pt"><span style="text-autospace:none"><span style="font-weight:bold"><img alt="ê·¸ë¦¼ìž…ë‹ˆë‹¤.
+ì›ë³¸ ê·¸ë¦¼ì˜ ì´ë¦„: CLP000020f46542.bmp
+ì›ë³¸ ê·¸ë¦¼ì˜ í¬ê¸°: ê°€ë¡œ 947pixel, ì„¸ë¡œ 456pixel" src="./ì œ12íšŒ cpsFestival ì˜ˆì„  ë¬¸ì œ(ì•ˆ)_files/1.png"
                 style="width:480ptpx; height:231ptpx"></span></span></span><br>
 <span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
-<span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò">Åä³¢
-        </span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+<span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€">í† ë¼
+        </span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">1</span></span></span><span style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò">¸¶¸®°¡ ¼û¾î ÀÖ½À´Ï´Ù</span></span><span lang="EN-US" style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò"><span style="letter-spacing:0pt">.
-            </span></span></span><span style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò">¾îµð¿¡ ¼û¾î
-            ÀÖ½À´Ï±î</span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+            style="font-family:í•œì»´ë‹ì›€">ë§ˆë¦¬ê°€ ìˆ¨ì–´ ìžˆìŠµë‹ˆë‹¤</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+            style="font-family:í•œì»´ë‹ì›€"><span style="letter-spacing:0pt">.
+            </span></span></span><span style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€">ì–´ë””ì— ìˆ¨ì–´
+            ìžˆìŠµë‹ˆê¹Œ</span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">?</span></span></span></span><br>
-<span style="color:#f90000"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+<span style="color:#f90000"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">[</span></span></span><span style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò">´äÇÏ±â</span></span><span lang="EN-US" style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò"><span style="letter-spacing:0pt">]</span></span></span></span>
+            style="font-family:í•œì»´ë‹ì›€">ë‹µí•˜ê¸°</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+            style="font-family:í•œì»´ë‹ì›€"><span style="letter-spacing:0pt">]</span></span></span></span>
 <table
     style="border-collapse:collapse; table-layout:fixed; border-top:none; border-left:none; border-bottom:none; border-right:none; border:solid #000000 0.28pt">
     <tbody>
         <tr>
             <td style="border-bottom:solid #000000 0.28pt; width:239.50pt; height:26.95pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:solid #000000 0.28pt; border-left:solid #000000 0.28pt; border-right:solid #000000 0.28pt"
                 valign="middle"><span style="text-autospace:none"><span lang="EN-US" style="font-size:12.0pt"><span
-                            style="font-family:±¼¸²Ã¼"><span style="letter-spacing:0pt">(1) </span></span></span><span
-                        style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼">¼ûÀº ±×¸² Ã£±â</span></span><span lang="EN-US"
-                        style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼"><span
+                            style="font-family:êµ´ë¦¼ì²´"><span style="letter-spacing:0pt">(1) </span></span></span><span
+                        style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´">ìˆ¨ì€ ê·¸ë¦¼ ì°¾ê¸°</span></span><span lang="EN-US"
+                        style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´"><span
                                 style="letter-spacing:0pt">(2</span></span></span><span style="font-size:12.0pt"><span
-                            style="font-family:±¼¸²Ã¼">Á¡</span></span><span lang="EN-US" style="font-size:12.0pt"><span
-                            style="font-family:±¼¸²Ã¼"><span style="letter-spacing:0pt">)</span></span></span></span></td>
+                            style="font-family:êµ´ë¦¼ì²´">ì </span></span><span lang="EN-US" style="font-size:12.0pt"><span
+                            style="font-family:êµ´ë¦¼ì²´"><span style="letter-spacing:0pt">)</span></span></span></span></td>
         </tr>
         <tr>
             <td style="border-bottom:solid #000000 0.28pt; width:239.50pt; height:208.74pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:solid #000000 0.28pt; border-left:solid #000000 0.28pt; border-right:solid #000000 0.28pt"
-                valign="top"><span style="text-autospace:none"><img alt="±×¸²ÀÔ´Ï´Ù.
-¿øº» ±×¸²ÀÇ ÀÌ¸§: CLP000020f46542.bmp
-¿øº» ±×¸²ÀÇ Å©±â: °¡·Î 947pixel, ¼¼·Î 456pixel" src="./Á¦12È¸ cpsFestival ¿¹¼± ¹®Á¦(¾È)_files/3.png"
+                valign="top"><span style="text-autospace:none"><img alt="ê·¸ë¦¼ìž…ë‹ˆë‹¤.
+ì›ë³¸ ê·¸ë¦¼ì˜ ì´ë¦„: CLP000020f46542.bmp
+ì›ë³¸ ê·¸ë¦¼ì˜ í¬ê¸°: ê°€ë¡œ 947pixel, ì„¸ë¡œ 456pixel" src="./ì œ12íšŒ cpsFestival ì˜ˆì„  ë¬¸ì œ(ì•ˆ)_files/3.png"
                         style="width:207ptpx; height:99ptpx"> <span style="font-size:12.0pt"><br><span
-                            style="font-family:±¼¸²Ã¼">Åä³¢¸¦ Ã£¾Æ¼­ µ¿±×¶ó¹ÌÇÏ¼¼¿ä</span></span><span lang="EN-US"
-                        style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼"><span
+                            style="font-family:êµ´ë¦¼ì²´">í† ë¼ë¥¼ ì°¾ì•„ì„œ ë™ê·¸ë¼ë¯¸í•˜ì„¸ìš”</span></span><span lang="EN-US"
+                        style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´"><span
                                 style="letter-spacing:0pt">.</span></span></span></span><br>
                 <span style="font-size:12.0pt"><span style="text-autospace:none"><span
                             style="color:#ff0000">&nbsp;</span></span></span>
@@ -57,30 +57,30 @@
     </tbody>
 </table>
 <span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
-<span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+<span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">(2) </span></span></span><span style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò">»ï°¢Çü</span></span><span lang="EN-US" style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò"><span style="letter-spacing:0pt">(3</span></span></span><span
-        style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò">Á¡</span></span><span lang="EN-US"
-        style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+            style="font-family:í•œì»´ë‹ì›€">ì‚¼ê°í˜•</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+            style="font-family:í•œì»´ë‹ì›€"><span style="letter-spacing:0pt">(3</span></span></span><span
+        style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€">ì </span></span><span lang="EN-US"
+        style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">)</span></span></span></span><br>
-<span style="font-size:13.0pt"><span style="text-autospace:none"><img alt="±×¸²ÀÔ´Ï´Ù.
-¿øº» ±×¸²ÀÇ ÀÌ¸§: CLP000001740005.bmp
-¿øº» ±×¸²ÀÇ Å©±â: °¡·Î 262pixel, ¼¼·Î 258pixel" src="./Á¦12È¸ cpsFestival ¿¹¼± ¹®Á¦(¾È)_files/2.png"
+<span style="font-size:13.0pt"><span style="text-autospace:none"><img alt="ê·¸ë¦¼ìž…ë‹ˆë‹¤.
+ì›ë³¸ ê·¸ë¦¼ì˜ ì´ë¦„: CLP000001740005.bmp
+ì›ë³¸ ê·¸ë¦¼ì˜ í¬ê¸°: ê°€ë¡œ 262pixel, ì„¸ë¡œ 258pixel" src="./ì œ12íšŒ cpsFestival ì˜ˆì„  ë¬¸ì œ(ì•ˆ)_files/2.png"
             style="width:95ptpx; height:94ptpx"></span></span><br>
-<span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+<span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">1</span></span></span><span style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò">°³ÀÇ Á÷¼±À» ±×¾î¼­ </span></span><span lang="EN-US" style="font-size:13.0pt"><span
-            style="font-family:ÇÑÄÄµ¸¿ò"><span style="letter-spacing:0pt">2</span></span></span><span
-        style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò">°³ÀÇ »ï°¢ÇüÀÌ º¸ÀÌ°Ô ÇÏ¿© º¸¼¼¿ä</span></span><span lang="EN-US"
-        style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+            style="font-family:í•œì»´ë‹ì›€">ê°œì˜ ì§ì„ ì„ ê·¸ì–´ì„œ </span></span><span lang="EN-US" style="font-size:13.0pt"><span
+            style="font-family:í•œì»´ë‹ì›€"><span style="letter-spacing:0pt">2</span></span></span><span
+        style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€">ê°œì˜ ì‚¼ê°í˜•ì´ ë³´ì´ê²Œ í•˜ì—¬ ë³´ì„¸ìš”</span></span><span lang="EN-US"
+        style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                 style="letter-spacing:0pt">.</span></span></span></span><br>
 <span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
 <span style="font-size:13.0pt"><span style="text-autospace:none"><span style="color:#f90000"><span lang="EN-US"
-                style="font-size:13.0pt"><span style="font-family:ÇÑÄÄµ¸¿ò"><span
+                style="font-size:13.0pt"><span style="font-family:í•œì»´ë‹ì›€"><span
                         style="letter-spacing:0pt">[</span></span></span><span style="font-size:13.0pt"><span
-                    style="font-family:ÇÑÄÄµ¸¿ò">´äÇÏ±â</span></span><span lang="EN-US" style="font-size:13.0pt"><span
-                    style="font-family:ÇÑÄÄµ¸¿ò"><span
+                    style="font-family:í•œì»´ë‹ì›€">ë‹µí•˜ê¸°</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+                    style="font-family:í•œì»´ë‹ì›€"><span
                         style="letter-spacing:0pt">]</span></span></span></span></span></span>
 <table
     style="border-collapse:collapse; table-layout:fixed; border-top:none; border-left:none; border-bottom:none; border-right:none; border:solid #000000 0.28pt">
@@ -88,27 +88,27 @@
         <tr>
             <td style="border-bottom:solid #000000 0.28pt; width:239.50pt; height:26.95pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:solid #000000 0.28pt; border-left:solid #000000 0.28pt; border-right:solid #000000 0.28pt"
                 valign="middle"><span style="text-autospace:none"><span lang="EN-US" style="font-size:12.0pt"><span
-                            style="font-family:±¼¸²Ã¼"><span style="letter-spacing:0pt">(2) </span></span></span><span
-                        style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼">»ï°¢Çü</span></span><span lang="EN-US"
-                        style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼"><span
+                            style="font-family:êµ´ë¦¼ì²´"><span style="letter-spacing:0pt">(2) </span></span></span><span
+                        style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´">ì‚¼ê°í˜•</span></span><span lang="EN-US"
+                        style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´"><span
                                 style="letter-spacing:0pt">(3</span></span></span><span style="font-size:12.0pt"><span
-                            style="font-family:±¼¸²Ã¼">Á¡</span></span><span lang="EN-US" style="font-size:12.0pt"><span
-                            style="font-family:±¼¸²Ã¼"><span style="letter-spacing:0pt">)</span></span></span></span></td>
+                            style="font-family:êµ´ë¦¼ì²´">ì </span></span><span lang="EN-US" style="font-size:12.0pt"><span
+                            style="font-family:êµ´ë¦¼ì²´"><span style="letter-spacing:0pt">)</span></span></span></span></td>
         </tr>
         <tr>
             <td style="border-bottom:solid #000000 0.28pt; width:239.50pt; height:208.74pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:solid #000000 0.28pt; border-left:solid #000000 0.28pt; border-right:solid #000000 0.28pt"
-                valign="top"><span style="text-autospace:none"><img alt="±×¸²ÀÔ´Ï´Ù.
-¿øº» ±×¸²ÀÇ ÀÌ¸§: CLP000001740005.bmp
-¿øº» ±×¸²ÀÇ Å©±â: °¡·Î 262pixel, ¼¼·Î 258pixel" src="./Á¦12È¸ cpsFestival ¿¹¼± ¹®Á¦(¾È)_files/4.png"
+                valign="top"><span style="text-autospace:none"><img alt="ê·¸ë¦¼ìž…ë‹ˆë‹¤.
+ì›ë³¸ ê·¸ë¦¼ì˜ ì´ë¦„: CLP000001740005.bmp
+ì›ë³¸ ê·¸ë¦¼ì˜ í¬ê¸°: ê°€ë¡œ 262pixel, ì„¸ë¡œ 258pixel" src="./ì œ12íšŒ cpsFestival ì˜ˆì„  ë¬¸ì œ(ì•ˆ)_files/4.png"
                         style="width:98ptpx; height:96ptpx"><br> <span lang="EN-US" style="font-size:12.0pt"><span
-                            style="font-family:±¼¸²Ã¼"><span style="letter-spacing:0.8pt">1</span></span></span><span
-                        style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼"><span style="letter-spacing:0.8pt">°³ÀÇ Á÷¼±À»
-                                ±×¾î¼­ </span></span></span><span lang="EN-US" style="font-size:12.0pt"><span
-                            style="font-family:±¼¸²Ã¼"><br><span style="letter-spacing:0.8pt">2</span></span></span><span
-                        style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼"><span style="letter-spacing:0.8pt">°³ÀÇ
-                            </span></span></span><span style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼"><span
-                                style="letter-spacing:0.7pt">»ï°¢ÇüÀÌ º¸ÀÌ°Ô ÇÏ¿© º¸¼¼¿ä</span></span></span><span lang="EN-US"
-                        style="font-size:12.0pt"><span style="font-family:±¼¸²Ã¼"><span
+                            style="font-family:êµ´ë¦¼ì²´"><span style="letter-spacing:0.8pt">1</span></span></span><span
+                        style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´"><span style="letter-spacing:0.8pt">ê°œì˜ ì§ì„ ì„
+                                ê·¸ì–´ì„œ </span></span></span><span lang="EN-US" style="font-size:12.0pt"><span
+                            style="font-family:êµ´ë¦¼ì²´"><br><span style="letter-spacing:0.8pt">2</span></span></span><span
+                        style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´"><span style="letter-spacing:0.8pt">ê°œì˜
+                            </span></span></span><span style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´"><span
+                                style="letter-spacing:0.7pt">ì‚¼ê°í˜•ì´ ë³´ì´ê²Œ í•˜ì—¬ ë³´ì„¸ìš”</span></span></span><span lang="EN-US"
+                        style="font-size:12.0pt"><span style="font-family:êµ´ë¦¼ì²´"><span
                                 style="letter-spacing:0.8pt">.</span></span></span></span></td>
         </tr>
     </tbody>
