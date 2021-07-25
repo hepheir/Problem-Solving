@@ -214,9 +214,8 @@
 
 이어서 전체 집합 S의 크기를 계산해보면 다음과 같습니다.
 
-∵ n((B ∪ G)<sup>c</sup>) =  n(B<sup>c</sup> ∩ G<sup>c</sup>) 이므로,
-
--   n(B<sup>c</sup> ∩ G<sup>c</sup>) = 2
+∵ n((B ∪ G)<sup>c</sup>) =  n(B<sup>c</sup> ∩ G<sup>c</sup>) 이고,
+∵ n(B<sup>c</sup> ∩ G<sup>c</sup>) = 2 이므로,
 
 -   n(S)
 
