@@ -25,10 +25,10 @@ predict_x = [11, -4, -9, 2, -10, -2, 0, -3, 1, -6, -7, -5, -8, -1]
 model.fit(x=train_x,
           y=train_y,
           batch_size=16,
-          epochs=128,
+          epochs=256,
           shuffle=True)
 
 predict_y = model.predict(x=predict_x)[:,0]
 
 for x, y in zip(predict_x, predict_y):
-    print(f'x: {x:<+4d}, y: {int(y):<+4d} ({y:+f})')
+    print(f'x: {x:<+4d},\ty: {round(y):<+4d} ({y:+f}),\tans: {5*x-7}')
