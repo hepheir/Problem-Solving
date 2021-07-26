@@ -1,4 +1,4 @@
-from sys import stdin
+from sys import stdin, stdout
 
 
 def solution():
@@ -10,7 +10,8 @@ def solution():
         counter[n] += 1
 
     for n in range(1, 10001):
-        print(f'{n}\n'*counter[n], end='')
+        for _ in range(counter[n]):
+            stdout.write(str(n)+'\n')
 
 
 if __name__ == '__main__':
