@@ -1,16 +1,15 @@
 from sys import stdin
-from collections import Counter
 
 
 def solution():
-    counter = Counter()
+    counter = [0] * 10001
 
     N = int(stdin.readline())
     for _ in range(N):
         n = int(stdin.readline())
         counter[n] += 1
 
-    for n in sorted(counter):
+    for n in range(1, 10001):
         print(f'{n}\n'*counter[n], end='')
 
 
