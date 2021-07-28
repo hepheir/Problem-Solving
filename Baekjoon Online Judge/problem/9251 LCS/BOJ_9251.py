@@ -1,24 +1,20 @@
-from sys import setrecursionlimit
-
-
-def LCS(X, Y, i, j):
-    # https://ko.wikipedia.org/wiki/%EC%B5%9C%EC%9E%A5_%EA%B3%B5%ED%86%B5_%EB%B6%80%EB%B6%84_%EC%88%98%EC%97%B4
-    # LCS 함수의 정의 참조
-    if i < 0 or j < 0:
-        return 0
-    if X[i] == Y[j]:
-        return LCS(X, Y, i-1, j-1)+1
-    else:
-        return max(LCS(X, Y, i, j-1), LCS(X, Y, i-1, j))
-
-
 def solution():
-    str_long = input()
-    str_short = input()
+    str1 = input()
+    str2 = input()
 
-    print(LCS(str_long, str_short, len(str_long)-1, len(str_short)-1))
+    dp = [[0]*(len(str2)+1) for _ in range(len(str1)+1)]
+
+    for i in range(len(str1)):
+        for j in range(len(str2)):
+            if str1[i] == str2[j]:
+                dp[i][j] = dp[i-1][j-1]+1
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+
+    answer = dp[len(str1)-1][len(str2)-1]
+
+    print(answer)
 
 
 if __name__ == '__main__':
-    setrecursionlimit(10**7)
     solution()
