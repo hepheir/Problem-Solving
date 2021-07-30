@@ -1,0 +1,1357 @@
+# 문제
+
+-   **제목**: 머신 러닝(Machine Learning)
+-   **배점**: 30점
+
+## 문제 보기
+
+<details>
+    <summary>문제 보기</summary>
+    <br>
+    <blockquote>
+		<h1>6. 머신 러닝(Machine Learning) (30점)</h1>
+		<br>
+		<span style="text-autospace:none"><span lang="EN-US" style="font-size:12.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt"><span style="font-weight:bold"><span
+								style="color:#ff0000">[</span></span></span></span></span><span style="font-size:12.0pt"><span
+					style="font-family:한컴돋움"><span style="font-weight:bold"><span style="color:#ff0000">이 문제는
+						</span></span></span></span><span lang="EN-US" style="font-size:12.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0pt"><span style="font-weight:bold"><span
+								style="color:#ff0000">'Python 3' </span></span></span></span></span><span
+				style="font-size:12.0pt"><span style="font-family:한컴돋움"><span style="font-weight:bold"><span
+							style="color:#ff0000">언어로 코딩하여 해결하면 최대 </span></span></span></span><span lang="EN-US"
+				style="font-size:12.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:0pt"><span
+							style="font-weight:bold"><span style="color:#ff0000">3</span></span></span></span></span><span
+				style="font-size:12.0pt"><span style="font-family:한컴돋움"><span style="font-weight:bold"><span
+							style="color:#ff0000">점을 가산합니다</span></span></span></span><span lang="EN-US"
+				style="font-size:12.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:0pt"><span
+							style="font-weight:bold"><span style="color:#ff0000">]</span></span></span></span></span></span><br>
+		<span style="font-size:13.0pt"><span style="text-autospace:none"><img alt="그림입니다.
+				원본 그림의 이름: CLP000018700002.bmp
+				원본 그림의 크기: 가로 159pixel, 세로 165pixel" src="./제12회 cpsFestival 예선 문제(안)_files/1.png"
+					style="width:98ptpx; height:101ptpx"></span></span>
+		<table
+			style="border-collapse:collapse; table-layout:fixed; border-top:none; border-left:none; border-bottom:none; border-right:none; border:solid #000000 0.28pt">
+			<tbody>
+				<tr>
+					<td style="border-bottom:solid #000000 0.28pt; width:476.24pt; height:449.79pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:solid #000000 0.28pt; border-left:solid #000000 0.28pt; border-right:solid #000000 0.28pt"
+						valign="middle"><span style="text-autospace:none"><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움">인공지능 시대이다</span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:0pt">.
+									</span></span></span></span><br>
+						<span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.8pt">인공지능</span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.8pt">(AI:Artificial Intelligence)</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.8pt">은
+										인간의 학습능력</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.8pt">, </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.8pt">추론능력</span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.8pt">,
+									</span></span></span><span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.8pt">지각능력</span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.8pt">,
+									</span></span></span><span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.8pt">그 외에</span></span></span> <span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-1.0pt">인공적으로 구현한 컴퓨터 시스템이다</span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">.
+									</span></span></span><span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-1.0pt">이러한 인공지능은 머신 러닝으로 만들어진다</span></span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-1.0pt">.</span></span></span> <span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">머신
+										러닝</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">(ML:Machine
+										Learning)</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">은 </span></span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-1.0pt">‘</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">기계가
+										학습한다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">’</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">는
+										뜻이다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">. ‘</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">기계가
+										학습한다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-1.0pt">’</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-1.0pt">는</span></span></span> <span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">것은
+									</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">x</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">변수의
+										값과 대응되는 </span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">y</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">변수의
+										값을 학습해서 </span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">x</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">와
+									</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">y </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">사이의
+										관계식을 찾는 것이다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">. </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">예를
+										들어 </span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.3pt">y=ax+b</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.3pt">의</span></span></span> <span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:0.1pt">관계식에서
+									</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:0.1pt">a, b </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:0.1pt">위치에
+										다양한 후보 값을 대입</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.1pt">하여 </span></span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.1pt">y</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.1pt">변수의 예측값을
+										계산하고</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.1pt">, </span></span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.4pt">y</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.4pt">예측값과</span></span></span> <span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">원래
+									</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">y</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">값의
+										오차가 가장 작을 때의</span></span></span> <span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">a, b </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">값을
+										찾아서 관계식 </span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.3pt">y=ax+b</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">를
+									</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움">완성한다</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:0pt">. </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">설명
+										변수</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">(x)</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">와 목표
+										변수</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">(y)</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">에
+									</span></span></span><span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.2pt">해당하는 </span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.2pt">data
+										set</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.2pt">이 주어졌을 때 두 변수
+									</span></span></span><span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.5pt">사이의 관계식을 찾는 </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.6pt">과정을
+										머신 </span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.8pt">러닝에서
+										훈련</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.8pt">(training)</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.8pt">이라
+										한다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.8pt">. </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.8pt">관계식을
+										찾고 </span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">나면 새로운
+										데이터</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">(x</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:0.4pt">′</span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.5pt">)</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">에 대해서</span></span></span>
+							<span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.6pt">목표값</span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.6pt">(y</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:0.4pt">′</span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.6pt">)</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.6pt">을 찾을 수 있는데 이것을
+										예측</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.5pt">(prediction)</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">이라
+										한다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.5pt">.
+									</span></span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
+						<span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.3pt">선형 회귀 모델</span></span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.3pt">(linear regression model)</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">과 딥
+										러닝</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">(deep
+										learning)</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.3pt">은 주요한 머신 러닝
+										알고리듬이다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.3pt">.</span></span></span></span><br>
+						<span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.2pt">선형 회귀 모델은 한 개 이상의 독립 변수</span></span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:-0.2pt">(</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.2pt">또는 설명
+										변수</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.2pt">) x</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.2pt">와 종속
+										변수</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.2pt">(</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:-0.2pt">또는
+										목표 변수</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.2pt">) </span></span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:0pt">y</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움">와의 선형 상관관계를 모델링하여 만들어진 회귀식이다</span></span><span lang="EN-US"
+								style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:0pt">.
+									</span></span></span><span style="font-size:13.0pt"><span style="font-family:한컴돋움">딥
+									러닝</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.4pt">(deep
+										learning)</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.4pt">은 인간의 신경망을 본뜬 알고리듬을 사용하여 관계식을
+										찾는다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:-0.4pt">.
+									</span></span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
+						<span style="text-autospace:none"><span style="letter-spacing:0.5pt"><span
+									style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+											style="letter-spacing:0.2pt">데이터 개수가 많거나 분포가 복잡할수록 인간의 인지능력으로 어떤 패턴을 인식하는 것은
+											어렵다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+										style="font-family:한컴돋움"><span style="letter-spacing:0.2pt">. </span></span></span><span
+									style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+											style="letter-spacing:0.4pt">이러한 경우에도 머신 러닝 알고리듬을 활용하면 패턴을 찾을 수
+											있다</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+										style="font-family:한컴돋움"><span style="letter-spacing:0.4pt">.
+										</span></span></span></span></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
+		<span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:한컴돋움">다음과 같이 같은 개수의 설명 변수와 목표
+					변수의 </span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">data set</span></span></span><span style="font-size:13.0pt"><span
+					style="font-family:한컴돋움">이 주어지면 모델을 만들고</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0pt">, </span></span></span><span
+				style="font-size:13.0pt"><span style="font-family:한컴돋움">그 모델로서 새로운 데이터</span></span><span lang="EN-US"
+				style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">(x</span></span></span><span style="font-size:13.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0.4pt">′</span></span></span><span lang="EN-US"
+				style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">)</span></span></span><span style="font-size:13.0pt"><span
+					style="font-family:한컴돋움">에 대한 목표값</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0pt">(y</span></span></span><span
+				style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0.4pt">′</span></span></span><span lang="EN-US" style="font-size:13.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0pt">)</span></span></span><span
+				style="font-size:13.0pt"><span style="font-family:한컴돋움">을 예측해 봅시다</span></span><span lang="EN-US"
+				style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">.</span></span></span></span><br>
+		<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
+		<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span>
+		<table
+			style="border-collapse:collapse; table-layout:fixed; border-top:none; border-left:none; border-bottom:none; border-right:none; border:none">
+			<tbody>
+				<tr>
+					<td style="border-bottom:none; width:93.79pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="text-autospace:none"><span
+									style="letter-spacing:-1.3pt"><span style="font-weight:bold"><span
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-1.6pt"><span style="font-weight:bold">설명 변수
+													</span></span></span></span><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-1.6pt"><span style="font-weight:bold">data
+														set</span></span></span></span></span></span></span></span></td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">5</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-15</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">7</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-7</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-11</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">3</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-9</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">1</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-1</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">11</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">9</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-13</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">13</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-3</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-5</span></span></span></span></span></span></span>
+					</td>
+				</tr>
+				<tr>
+					<td style="border-bottom:none; width:93.79pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="text-autospace:none"><span
+									style="letter-spacing:-1.6pt"><span style="font-weight:bold"><span
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-1.6pt"><span style="font-weight:bold">목표 변수
+													</span></span></span></span> <span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.6pt"><span style="font-weight:bold">data
+														set</span></span></span></span></span></span></span></span></td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">18</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-82</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">28</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-42</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-62</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">8</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-52</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-2</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-12</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">48</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">38</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-72</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">58</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">&#8211;</span></span></span><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">22</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">&#8211;</span></span></span><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">32</span></span></span></span></span></span></span>
+					</td>
+				</tr>
+				<tr>
+					<td style="border-bottom:none; width:93.79pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="text-autospace:none"><span
+									style="letter-spacing:-1.7pt"><span style="font-weight:bold"><span
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-1.7pt"><span style="font-weight:bold">새로운 데이터
+													</span></span></span></span><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-1.7pt"><span
+														style="font-weight:bold">(x</span></span></span></span><span
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-0.5pt">′</span></span></span><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-1.7pt"><span
+														style="font-weight:bold">)</span></span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-11</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-4</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-9</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">2</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-10</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-2</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">0</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-3</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">1</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-6</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-7</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">-5</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">&#8211;</span></span></span><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">8</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span style="letter-spacing:-2.0pt"><span
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">&#8211;</span></span></span><span lang="EN-US"
+											style="font-size:11.0pt"><span style="font-family:한컴돋움"><span
+													style="letter-spacing:-2.0pt">1</span></span></span></span></span></span></span>
+					</td>
+					<td style="border-bottom:none; width:27.02pt; height:22.31pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:none; border-left:none; border-right:none"
+						valign="middle"><span style="font-size:11.0pt"><span style="word-break:keep-all"><span
+									style="text-autospace:none"><span
+										style="letter-spacing:-2.0pt">&nbsp;</span></span></span></span></td>
+				</tr>
+			</tbody>
+		</table>
+		<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
+		<span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">[</span></span></span><span style="font-size:13.0pt"><span
+					style="font-family:한컴돋움">참고</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0pt">]</span></span></span></span><br>
+		<span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">Python</span></span></span><span style="font-size:13.0pt"><span
+					style="font-family:한컴돋움">에서 </span></span><span lang="EN-US" style="font-size:13.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0pt">sklearn</span></span></span><span
+				style="font-size:13.0pt"><span style="font-family:한컴돋움">의 </span></span><span lang="EN-US"
+				style="font-size:13.0pt"><span style="font-family:한컴돋움"><span style="letter-spacing:0pt">LinearRegression
+					</span></span></span><span style="font-size:13.0pt"><span style="font-family:한컴돋움">클래스 함수 또는
+				</span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">Tensorflow</span></span></span><span style="font-size:13.0pt"><span
+					style="font-family:한컴돋움">의 </span></span><span lang="EN-US" style="font-size:13.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0pt">Keras(deep learning
+						framework)</span></span></span><span style="font-size:13.0pt"><span style="font-family:한컴돋움">를 사용할 수
+					있습니다</span></span><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">.</span></span></span></span><br>
+		<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span><br>
+		<span style="color:#f90000"><span lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+						style="letter-spacing:0pt">[</span></span></span><span style="font-size:13.0pt"><span
+					style="font-family:한컴돋움">답하기</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+					style="font-family:한컴돋움"><span style="letter-spacing:0pt">]</span></span></span></span>
+		<table
+			style="border-collapse:collapse; table-layout:fixed; border-top:none; border-left:none; border-bottom:none; border-right:none; border:solid #000000 0.28pt">
+			<tbody>
+				<tr>
+					<td style="border-bottom:solid #000000 0.28pt; width:464.82pt; height:57.42pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:solid #000000 0.28pt; border-left:solid #000000 0.28pt; border-right:solid #000000 0.28pt"
+						valign="middle"><span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:0pt">(1) </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움">새로운 데이터에 대한 목표값</span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:0pt">(</span></span></span><span style="font-size:13.0pt"><span
+									style="font-family:한컴돋움">예측값</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:0pt">)</span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움">은 다음과 같습니다</span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:0pt">.</span></span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span>
+					</td>
+				</tr>
+				<tr>
+					<td style="border-bottom:solid #000000 0.28pt; width:464.82pt; height:426.84pt; padding:1.41pt 5.10pt 1.41pt 5.10pt; border-top:solid #000000 0.28pt; border-left:solid #000000 0.28pt; border-right:solid #000000 0.28pt"
+						valign="middle"><span style="text-autospace:none"><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:0pt">(2) </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움">문제 해결방법은 다음과 같습니다</span></span><span
+								lang="EN-US" style="font-size:13.0pt"><span style="font-family:한컴돋움"><span
+										style="letter-spacing:0pt">.</span></span></span></span><br>
+						<span style="text-autospace:none"><span style="font-size:13.0pt"><span style="font-family:한컴돋움">소스 코드와
+									해결 방법을 적습니다</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:0pt">. </span></span></span><span
+								style="font-size:13.0pt"><span style="font-family:한컴돋움">수작업 등의 방법으로 해결한 경우 에는 해결 방법만
+									적습니다</span></span><span lang="EN-US" style="font-size:13.0pt"><span
+									style="font-family:한컴돋움"><span style="letter-spacing:0pt">.</span></span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none"><span
+									style="color:#ff0000">&nbsp;</span></span></span><br>
+						<span style="font-size:13.0pt"><span style="text-autospace:none">&nbsp;</span></span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		&nbsp;
+    </blockquote>
+</details>
+
+
+# 답하기
+
+## (1) 새로운 데이터에 대한 목표값(예측값)은 다음과 같습니다.
+
+| 새로운 데이터 (x') | 목표값(예측값, y') |
+|---|---|
+| 11 | 48 |
+| -4 | -27 |
+| -9 | -52 |
+| +2 | 3 |
+| -10 | -57 |
+| -2 | -17 |
+| 0 | -7 |
+| -3 | -22 |
+| 1 | -2 |
+| -6 | -37 |
+| -7 | -42 |
+| -5 | -32 |
+| -8 | -47 |
+| -1 | -12 |
+
+## (2) 문제 해결방법은 다음과 같습니다. 소스 코드와 해결 방법을 적습니다. 수작업 등의 방법으로 해결한 경우 에는 해결 방법만 적습니다.
+
+### 문제 해결방법
+
+Python3을 사용하여 Tensorflow(2.5.0)와 Keras를 사용하여 문제를 해결하였습니다.
+
+
+### 선형회귀 분석 딥러닝 모델 정보
+
+모델은 1개의 Dense 층으로만 이루어져 있으며, 활성함수로 선형함수를 사용하는 선형회귀 모델입니다.
+모델의 정보를 Python 프로그램 상에서 요약하여 출력하면 다음과 같습니다.
+
+```
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+dense (Dense)                (None, 1)                 2
+=================================================================
+Total params: 2
+Trainable params: 2
+Non-trainable params: 0
+_________________________________________________________________
+```
+
+### 모델의 훈련
+
+모델은 총 256세대(epoch)에 걸쳐 훈련되었습니다.
+같은 데이터로 여러번 반복하여 훈련을 함으로써 모델의 정확도 향상을 기대할 수 있습니다.
+
+모델이 얼마나 정확한지를 평가하는 척도로는 손실률(loss)가 있습니다.
+loss가 적을 수록 모델의 신뢰도가 높아지죠.
+
+모델이 특정 데이터에만 과하게 학습되는 현상인 오버피팅(overfitting)이 발생할 위험성이 있으나,
+모델이 안정화되고 손실률이 0에 최대한 가까이 수렴 할 수 있도록 충분한 epoch, 즉, 256회의 반복 학습이 필요하다고 판단하였습니다.
+물론, 데이터는 무작위로 선별되어 학습에 사용되었습니다.
+
+<details>
+<summary>훈련(학습) 기록 보기(verbose)</summary>
+<br>
+
+```
+2021-07-25 08:32:32.643100: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2021-07-25 08:32:32.644098: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 2800180000 Hz
+Epoch 1/256
+1/1 [==============================] - 0s 480ms/step - loss: 3401.2444 - mse: 3401.2444
+Epoch 2/256
+1/1 [==============================] - 0s 19ms/step - loss: 930.0562 - mse: 930.0562
+Epoch 3/256
+1/1 [==============================] - 0s 5ms/step - loss: 276.9077 - mse: 276.9077
+Epoch 4/256
+1/1 [==============================] - 0s 21ms/step - loss: 103.3823 - mse: 103.3823
+Epoch 5/256
+1/1 [==============================] - 0s 20ms/step - loss: 56.4233 - mse: 56.4233
+Epoch 6/256
+1/1 [==============================] - 0s 14ms/step - loss: 42.8970 - mse: 42.8970
+Epoch 7/256
+1/1 [==============================] - 0s 17ms/step - loss: 38.2344 - mse: 38.2344
+Epoch 8/256
+1/1 [==============================] - 0s 12ms/step - loss: 35.9526 - mse: 35.9526
+Epoch 9/256
+1/1 [==============================] - 0s 22ms/step - loss: 34.3399 - mse: 34.3399
+Epoch 10/256
+1/1 [==============================] - 0s 13ms/step - loss: 32.9433 - mse: 32.9433
+Epoch 11/256
+1/1 [==============================] - 0s 20ms/step - loss: 31.6415 - mse: 31.6415
+Epoch 12/256
+1/1 [==============================] - 0s 64ms/step - loss: 30.4013 - mse: 30.4013
+Epoch 13/256
+1/1 [==============================] - 0s 11ms/step - loss: 29.2124 - mse: 29.2124
+Epoch 14/256
+1/1 [==============================] - 0s 19ms/step - loss: 28.0707 - mse: 28.0707
+Epoch 15/256
+1/1 [==============================] - 0s 16ms/step - loss: 26.9737 - mse: 26.9737
+Epoch 16/256
+1/1 [==============================] - 0s 10ms/step - loss: 25.9197 - mse: 25.9197
+Epoch 17/256
+1/1 [==============================] - 0s 3ms/step - loss: 24.9069 - mse: 24.9069
+Epoch 18/256
+1/1 [==============================] - 0s 24ms/step - loss: 23.9337 - mse: 23.9337
+Epoch 19/256
+1/1 [==============================] - 0s 49ms/step - loss: 22.9984 - mse: 22.9984
+Epoch 20/256
+1/1 [==============================] - 0s 10ms/step - loss: 22.0998 - mse: 22.0998
+Epoch 21/256
+1/1 [==============================] - 0s 14ms/step - loss: 21.2362 - mse: 21.2362
+Epoch 22/256
+1/1 [==============================] - 0s 27ms/step - loss: 20.4064 - mse: 20.4064
+Epoch 23/256
+1/1 [==============================] - 0s 3ms/step - loss: 19.6090 - mse: 19.6090
+Epoch 24/256
+1/1 [==============================] - 0s 15ms/step - loss: 18.8428 - mse: 18.8428
+Epoch 25/256
+1/1 [==============================] - 0s 16ms/step - loss: 18.1065 - mse: 18.1065
+Epoch 26/256
+1/1 [==============================] - 0s 13ms/step - loss: 17.3990 - mse: 17.3990
+Epoch 27/256
+1/1 [==============================] - 0s 13ms/step - loss: 16.7192 - mse: 16.7192
+Epoch 28/256
+1/1 [==============================] - 0s 13ms/step - loss: 16.0659 - mse: 16.0659
+Epoch 29/256
+1/1 [==============================] - 0s 58ms/step - loss: 15.4381 - mse: 15.4381
+Epoch 30/256
+1/1 [==============================] - 0s 9ms/step - loss: 14.8348 - mse: 14.8348
+Epoch 31/256
+1/1 [==============================] - 0s 40ms/step - loss: 14.2552 - mse: 14.2552
+Epoch 32/256
+1/1 [==============================] - 0s 18ms/step - loss: 13.6981 - mse: 13.6981
+Epoch 33/256
+1/1 [==============================] - 0s 14ms/step - loss: 13.1629 - mse: 13.1629
+Epoch 34/256
+1/1 [==============================] - 0s 17ms/step - loss: 12.6485 - mse: 12.6485
+Epoch 35/256
+1/1 [==============================] - 0s 25ms/step - loss: 12.1543 - mse: 12.1543
+Epoch 36/256
+1/1 [==============================] - 0s 22ms/step - loss: 11.6794 - mse: 11.6794
+Epoch 37/256
+1/1 [==============================] - 0s 27ms/step - loss: 11.2230 - mse: 11.2230
+Epoch 38/256
+1/1 [==============================] - 0s 24ms/step - loss: 10.7845 - mse: 10.7845
+Epoch 39/256
+1/1 [==============================] - 0s 10ms/step - loss: 10.3631 - mse: 10.3631
+Epoch 40/256
+1/1 [==============================] - 0s 22ms/step - loss: 9.9581 - mse: 9.9581
+Epoch 41/256
+1/1 [==============================] - 0s 4ms/step - loss: 9.5690 - mse: 9.5690
+Epoch 42/256
+1/1 [==============================] - 0s 13ms/step - loss: 9.1951 - mse: 9.1951
+Epoch 43/256
+1/1 [==============================] - 0s 20ms/step - loss: 8.8358 - mse: 8.8358
+Epoch 44/256
+1/1 [==============================] - 0s 27ms/step - loss: 8.4905 - mse: 8.4905
+Epoch 45/256
+1/1 [==============================] - 0s 8ms/step - loss: 8.1588 - mse: 8.1588
+Epoch 46/256
+1/1 [==============================] - 0s 53ms/step - loss: 7.8400 - mse: 7.8400
+Epoch 47/256
+1/1 [==============================] - 0s 32ms/step - loss: 7.5336 - mse: 7.5336
+Epoch 48/256
+1/1 [==============================] - 0s 18ms/step - loss: 7.2392 - mse: 7.2392
+Epoch 49/256
+1/1 [==============================] - 0s 48ms/step - loss: 6.9564 - mse: 6.9564
+Epoch 50/256
+1/1 [==============================] - 0s 12ms/step - loss: 6.6846 - mse: 6.6846
+Epoch 51/256
+1/1 [==============================] - 0s 11ms/step - loss: 6.4234 - mse: 6.4234
+Epoch 52/256
+1/1 [==============================] - 0s 29ms/step - loss: 6.1724 - mse: 6.1724
+Epoch 53/256
+1/1 [==============================] - 0s 21ms/step - loss: 5.9312 - mse: 5.9312
+Epoch 54/256
+1/1 [==============================] - 0s 30ms/step - loss: 5.6994 - mse: 5.6994
+Epoch 55/256
+1/1 [==============================] - 0s 23ms/step - loss: 5.4767 - mse: 5.4767
+Epoch 56/256
+1/1 [==============================] - 0s 32ms/step - loss: 5.2627 - mse: 5.2627
+Epoch 57/256
+1/1 [==============================] - 0s 24ms/step - loss: 5.0571 - mse: 5.0571
+Epoch 58/256
+1/1 [==============================] - 0s 12ms/step - loss: 4.8595 - mse: 4.8595
+Epoch 59/256
+1/1 [==============================] - 0s 37ms/step - loss: 4.6696 - mse: 4.6696
+Epoch 60/256
+1/1 [==============================] - 0s 19ms/step - loss: 4.4871 - mse: 4.4871
+Epoch 61/256
+1/1 [==============================] - 0s 9ms/step - loss: 4.3118 - mse: 4.3118
+Epoch 62/256
+1/1 [==============================] - 0s 19ms/step - loss: 4.1433 - mse: 4.1433
+Epoch 63/256
+1/1 [==============================] - 0s 47ms/step - loss: 3.9814 - mse: 3.9814
+Epoch 64/256
+1/1 [==============================] - 0s 33ms/step - loss: 3.8258 - mse: 3.8258
+Epoch 65/256
+1/1 [==============================] - 0s 10ms/step - loss: 3.6763 - mse: 3.6763
+Epoch 66/256
+1/1 [==============================] - 0s 18ms/step - loss: 3.5327 - mse: 3.5327
+Epoch 67/256
+1/1 [==============================] - 0s 14ms/step - loss: 3.3946 - mse: 3.3946
+Epoch 68/256
+1/1 [==============================] - 0s 15ms/step - loss: 3.2620 - mse: 3.2620
+Epoch 69/256
+1/1 [==============================] - 0s 11ms/step - loss: 3.1345 - mse: 3.1345
+Epoch 70/256
+1/1 [==============================] - 0s 26ms/step - loss: 3.0120 - mse: 3.0120
+Epoch 71/256
+1/1 [==============================] - 0s 6ms/step - loss: 2.8943 - mse: 2.8943
+Epoch 72/256
+1/1 [==============================] - 0s 8ms/step - loss: 2.7813 - mse: 2.7813
+Epoch 73/256
+1/1 [==============================] - 0s 17ms/step - loss: 2.6726 - mse: 2.6726
+Epoch 74/256
+1/1 [==============================] - 0s 12ms/step - loss: 2.5681 - mse: 2.5681
+Epoch 75/256
+1/1 [==============================] - 0s 10ms/step - loss: 2.4678 - mse: 2.4678
+Epoch 76/256
+1/1 [==============================] - 0s 39ms/step - loss: 2.3714 - mse: 2.3714
+Epoch 77/256
+1/1 [==============================] - 0s 24ms/step - loss: 2.2787 - mse: 2.2787
+Epoch 78/256
+1/1 [==============================] - 0s 25ms/step - loss: 2.1897 - mse: 2.1897
+Epoch 79/256
+1/1 [==============================] - 0s 25ms/step - loss: 2.1041 - mse: 2.1041
+Epoch 80/256
+1/1 [==============================] - 0s 14ms/step - loss: 2.0219 - mse: 2.0219
+Epoch 81/256
+1/1 [==============================] - 0s 27ms/step - loss: 1.9429 - mse: 1.9429
+Epoch 82/256
+1/1 [==============================] - 0s 13ms/step - loss: 1.8670 - mse: 1.8670
+Epoch 83/256
+1/1 [==============================] - 0s 16ms/step - loss: 1.7940 - mse: 1.7940
+Epoch 84/256
+1/1 [==============================] - 0s 24ms/step - loss: 1.7239 - mse: 1.7239
+Epoch 85/256
+1/1 [==============================] - 0s 8ms/step - loss: 1.6565 - mse: 1.6565
+Epoch 86/256
+1/1 [==============================] - 0s 20ms/step - loss: 1.5918 - mse: 1.5918
+Epoch 87/256
+1/1 [==============================] - 0s 50ms/step - loss: 1.5296 - mse: 1.5296
+Epoch 88/256
+1/1 [==============================] - 0s 21ms/step - loss: 1.4698 - mse: 1.4698
+Epoch 89/256
+1/1 [==============================] - 0s 8ms/step - loss: 1.4124 - mse: 1.4124
+Epoch 90/256
+1/1 [==============================] - 0s 13ms/step - loss: 1.3572 - mse: 1.3572
+Epoch 91/256
+1/1 [==============================] - 0s 36ms/step - loss: 1.3042 - mse: 1.3042
+Epoch 92/256
+1/1 [==============================] - 0s 11ms/step - loss: 1.2532 - mse: 1.2532
+Epoch 93/256
+1/1 [==============================] - 0s 26ms/step - loss: 1.2043 - mse: 1.2043
+Epoch 94/256
+1/1 [==============================] - 0s 33ms/step - loss: 1.1572 - mse: 1.1572
+Epoch 95/256
+1/1 [==============================] - 0s 13ms/step - loss: 1.1120 - mse: 1.1120
+Epoch 96/256
+1/1 [==============================] - 0s 17ms/step - loss: 1.0685 - mse: 1.0685
+Epoch 97/256
+1/1 [==============================] - 0s 12ms/step - loss: 1.0268 - mse: 1.0268
+Epoch 98/256
+1/1 [==============================] - 0s 13ms/step - loss: 0.9867 - mse: 0.9867
+Epoch 99/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.9481 - mse: 0.9481
+Epoch 100/256
+1/1 [==============================] - 0s 23ms/step - loss: 0.9111 - mse: 0.9111
+Epoch 101/256
+1/1 [==============================] - 0s 36ms/step - loss: 0.8755 - mse: 0.8755
+Epoch 102/256
+1/1 [==============================] - 0s 15ms/step - loss: 0.8413 - mse: 0.8413
+Epoch 103/256
+1/1 [==============================] - 0s 34ms/step - loss: 0.8084 - mse: 0.8084
+Epoch 104/256
+1/1 [==============================] - 0s 11ms/step - loss: 0.7768 - mse: 0.7768
+Epoch 105/256
+1/1 [==============================] - 0s 5ms/step - loss: 0.7464 - mse: 0.7464
+Epoch 106/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.7173 - mse: 0.7173
+Epoch 107/256
+1/1 [==============================] - 0s 23ms/step - loss: 0.6892 - mse: 0.6892
+Epoch 108/256
+1/1 [==============================] - 0s 25ms/step - loss: 0.6623 - mse: 0.6623
+Epoch 109/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.6364 - mse: 0.6364
+Epoch 110/256
+1/1 [==============================] - 0s 18ms/step - loss: 0.6116 - mse: 0.6116
+Epoch 111/256
+1/1 [==============================] - 0s 10ms/step - loss: 0.5877 - mse: 0.5877
+Epoch 112/256
+1/1 [==============================] - 0s 10ms/step - loss: 0.5647 - mse: 0.5647
+Epoch 113/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.5426 - mse: 0.5426
+Epoch 114/256
+1/1 [==============================] - 0s 9ms/step - loss: 0.5214 - mse: 0.5214
+Epoch 115/256
+1/1 [==============================] - 0s 51ms/step - loss: 0.5011 - mse: 0.5011
+Epoch 116/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.4815 - mse: 0.4815
+Epoch 117/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.4627 - mse: 0.4627
+Epoch 118/256
+1/1 [==============================] - 0s 28ms/step - loss: 0.4446 - mse: 0.4446
+Epoch 119/256
+1/1 [==============================] - 0s 20ms/step - loss: 0.4272 - mse: 0.4272
+Epoch 120/256
+1/1 [==============================] - 0s 15ms/step - loss: 0.4105 - mse: 0.4105
+Epoch 121/256
+1/1 [==============================] - 0s 34ms/step - loss: 0.3945 - mse: 0.3945
+Epoch 122/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.3791 - mse: 0.3791
+Epoch 123/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.3643 - mse: 0.3643
+Epoch 124/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.3500 - mse: 0.3500
+Epoch 125/256
+1/1 [==============================] - 0s 47ms/step - loss: 0.3363 - mse: 0.3363
+Epoch 126/256
+1/1 [==============================] - 0s 64ms/step - loss: 0.3232 - mse: 0.3232
+Epoch 127/256
+1/1 [==============================] - 0s 72ms/step - loss: 0.3106 - mse: 0.3106
+Epoch 128/256
+1/1 [==============================] - 0s 30ms/step - loss: 0.2984 - mse: 0.2984
+Epoch 129/256
+1/1 [==============================] - 0s 13ms/step - loss: 0.2868 - mse: 0.2868
+Epoch 130/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.2756 - mse: 0.2756
+Epoch 131/256
+1/1 [==============================] - 0s 22ms/step - loss: 0.2648 - mse: 0.2648
+Epoch 132/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.2545 - mse: 0.2545
+Epoch 133/256
+1/1 [==============================] - 0s 18ms/step - loss: 0.2445 - mse: 0.2445
+Epoch 134/256
+1/1 [==============================] - 0s 6ms/step - loss: 0.2350 - mse: 0.2350
+Epoch 135/256
+1/1 [==============================] - 0s 17ms/step - loss: 0.2258 - mse: 0.2258
+Epoch 136/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.2170 - mse: 0.2170
+Epoch 137/256
+1/1 [==============================] - 0s 28ms/step - loss: 0.2085 - mse: 0.2085
+Epoch 138/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.2003 - mse: 0.2003
+Epoch 139/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.1925 - mse: 0.1925
+Epoch 140/256
+1/1 [==============================] - 0s 25ms/step - loss: 0.1850 - mse: 0.1850
+Epoch 141/256
+1/1 [==============================] - 0s 17ms/step - loss: 0.1778 - mse: 0.1778
+Epoch 142/256
+1/1 [==============================] - 0s 8ms/step - loss: 0.1708 - mse: 0.1708
+Epoch 143/256
+1/1 [==============================] - 0s 24ms/step - loss: 0.1641 - mse: 0.1641
+Epoch 144/256
+1/1 [==============================] - 0s 59ms/step - loss: 0.1577 - mse: 0.1577
+Epoch 145/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.1516 - mse: 0.1516
+Epoch 146/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.1456 - mse: 0.1456
+Epoch 147/256
+1/1 [==============================] - 0s 28ms/step - loss: 0.1399 - mse: 0.1399
+Epoch 148/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.1345 - mse: 0.1345
+Epoch 149/256
+1/1 [==============================] - 0s 49ms/step - loss: 0.1292 - mse: 0.1292
+Epoch 150/256
+1/1 [==============================] - 0s 44ms/step - loss: 0.1242 - mse: 0.1242
+Epoch 151/256
+1/1 [==============================] - 0s 48ms/step - loss: 0.1193 - mse: 0.1193
+Epoch 152/256
+1/1 [==============================] - 0s 20ms/step - loss: 0.1147 - mse: 0.1147
+Epoch 153/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.1102 - mse: 0.1102
+Epoch 154/256
+1/1 [==============================] - 0s 32ms/step - loss: 0.1059 - mse: 0.1059
+Epoch 155/256
+1/1 [==============================] - 0s 7ms/step - loss: 0.1017 - mse: 0.1017
+Epoch 156/256
+1/1 [==============================] - 0s 2ms/step - loss: 0.0978 - mse: 0.0978
+Epoch 157/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.0939 - mse: 0.0939
+Epoch 158/256
+1/1 [==============================] - 0s 9ms/step - loss: 0.0903 - mse: 0.0903
+Epoch 159/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.0867 - mse: 0.0867
+Epoch 160/256
+1/1 [==============================] - 0s 15ms/step - loss: 0.0834 - mse: 0.0834
+Epoch 161/256
+1/1 [==============================] - 0s 4ms/step - loss: 0.0801 - mse: 0.0801
+Epoch 162/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.0770 - mse: 0.0770
+Epoch 163/256
+1/1 [==============================] - 0s 6ms/step - loss: 0.0740 - mse: 0.0740
+Epoch 164/256
+1/1 [==============================] - 0s 24ms/step - loss: 0.0711 - mse: 0.0711
+Epoch 165/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.0683 - mse: 0.0683
+Epoch 166/256
+1/1 [==============================] - 0s 28ms/step - loss: 0.0656 - mse: 0.0656
+Epoch 167/256
+1/1 [==============================] - 0s 11ms/step - loss: 0.0631 - mse: 0.0631
+Epoch 168/256
+1/1 [==============================] - 0s 28ms/step - loss: 0.0606 - mse: 0.0606
+Epoch 169/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.0582 - mse: 0.0582
+Epoch 170/256
+1/1 [==============================] - 0s 9ms/step - loss: 0.0560 - mse: 0.0560
+Epoch 171/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.0538 - mse: 0.0538
+Epoch 172/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.0517 - mse: 0.0517
+Epoch 173/256
+1/1 [==============================] - 0s 33ms/step - loss: 0.0496 - mse: 0.0496
+Epoch 174/256
+1/1 [==============================] - 0s 14ms/step - loss: 0.0477 - mse: 0.0477
+Epoch 175/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.0458 - mse: 0.0458
+Epoch 176/256
+1/1 [==============================] - 0s 28ms/step - loss: 0.0440 - mse: 0.0440
+Epoch 177/256
+1/1 [==============================] - 0s 19ms/step - loss: 0.0423 - mse: 0.0423
+Epoch 178/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.0407 - mse: 0.0407
+Epoch 179/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.0391 - mse: 0.0391
+Epoch 180/256
+1/1 [==============================] - 0s 24ms/step - loss: 0.0376 - mse: 0.0376
+Epoch 181/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.0361 - mse: 0.0361
+Epoch 182/256
+1/1 [==============================] - 0s 23ms/step - loss: 0.0347 - mse: 0.0347
+Epoch 183/256
+1/1 [==============================] - 0s 23ms/step - loss: 0.0333 - mse: 0.0333
+Epoch 184/256
+1/1 [==============================] - 0s 19ms/step - loss: 0.0320 - mse: 0.0320
+Epoch 185/256
+1/1 [==============================] - 0s 7ms/step - loss: 0.0308 - mse: 0.0308
+Epoch 186/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.0296 - mse: 0.0296
+Epoch 187/256
+1/1 [==============================] - 0s 13ms/step - loss: 0.0284 - mse: 0.0284
+Epoch 188/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.0273 - mse: 0.0273
+Epoch 189/256
+1/1 [==============================] - 0s 22ms/step - loss: 0.0262 - mse: 0.0262
+Epoch 190/256
+1/1 [==============================] - 0s 10ms/step - loss: 0.0252 - mse: 0.0252
+Epoch 191/256
+1/1 [==============================] - 0s 13ms/step - loss: 0.0242 - mse: 0.0242
+Epoch 192/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.0233 - mse: 0.0233
+Epoch 193/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.0224 - mse: 0.0224
+Epoch 194/256
+1/1 [==============================] - 0s 7ms/step - loss: 0.0215 - mse: 0.0215
+Epoch 195/256
+1/1 [==============================] - 0s 20ms/step - loss: 0.0207 - mse: 0.0207
+Epoch 196/256
+1/1 [==============================] - 0s 34ms/step - loss: 0.0198 - mse: 0.0198
+Epoch 197/256
+1/1 [==============================] - 0s 31ms/step - loss: 0.0191 - mse: 0.0191
+Epoch 198/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.0183 - mse: 0.0183
+Epoch 199/256
+1/1 [==============================] - 0s 8ms/step - loss: 0.0176 - mse: 0.0176
+Epoch 200/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.0169 - mse: 0.0169
+Epoch 201/256
+1/1 [==============================] - 0s 5ms/step - loss: 0.0163 - mse: 0.0163
+Epoch 202/256
+1/1 [==============================] - 0s 53ms/step - loss: 0.0156 - mse: 0.0156
+Epoch 203/256
+1/1 [==============================] - 0s 5ms/step - loss: 0.0150 - mse: 0.0150
+Epoch 204/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.0144 - mse: 0.0144
+Epoch 205/256
+1/1 [==============================] - 0s 48ms/step - loss: 0.0139 - mse: 0.0139
+Epoch 206/256
+1/1 [==============================] - 0s 68ms/step - loss: 0.0133 - mse: 0.0133
+Epoch 207/256
+1/1 [==============================] - 0s 22ms/step - loss: 0.0128 - mse: 0.0128
+Epoch 208/256
+1/1 [==============================] - 0s 49ms/step - loss: 0.0123 - mse: 0.0123
+Epoch 209/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.0118 - mse: 0.0118
+Epoch 210/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.0114 - mse: 0.0114
+Epoch 211/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.0109 - mse: 0.0109
+Epoch 212/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.0105 - mse: 0.0105
+Epoch 213/256
+1/1 [==============================] - 0s 51ms/step - loss: 0.0101 - mse: 0.0101
+Epoch 214/256
+1/1 [==============================] - 0s 57ms/step - loss: 0.0097 - mse: 0.0097
+Epoch 215/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.0093 - mse: 0.0093
+Epoch 216/256
+1/1 [==============================] - 0s 33ms/step - loss: 0.0089 - mse: 0.0089
+Epoch 217/256
+1/1 [==============================] - 0s 13ms/step - loss: 0.0086 - mse: 0.0086
+Epoch 218/256
+1/1 [==============================] - 0s 48ms/step - loss: 0.0083 - mse: 0.0083
+Epoch 219/256
+1/1 [==============================] - 0s 48ms/step - loss: 0.0079 - mse: 0.0079
+Epoch 220/256
+1/1 [==============================] - 0s 10ms/step - loss: 0.0076 - mse: 0.0076
+Epoch 221/256
+1/1 [==============================] - 0s 19ms/step - loss: 0.0073 - mse: 0.0073
+Epoch 222/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.0070 - mse: 0.0070
+Epoch 223/256
+1/1 [==============================] - 0s 16ms/step - loss: 0.0068 - mse: 0.0068
+Epoch 224/256
+1/1 [==============================] - 0s 22ms/step - loss: 0.0065 - mse: 0.0065
+Epoch 225/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.0062 - mse: 0.0062
+Epoch 226/256
+1/1 [==============================] - 0s 23ms/step - loss: 0.0060 - mse: 0.0060
+Epoch 227/256
+1/1 [==============================] - 0s 23ms/step - loss: 0.0058 - mse: 0.0058
+Epoch 228/256
+1/1 [==============================] - 0s 25ms/step - loss: 0.0055 - mse: 0.0055
+Epoch 229/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.0053 - mse: 0.0053
+Epoch 230/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.0051 - mse: 0.0051
+Epoch 231/256
+1/1 [==============================] - 0s 28ms/step - loss: 0.0049 - mse: 0.0049
+Epoch 232/256
+1/1 [==============================] - 0s 13ms/step - loss: 0.0047 - mse: 0.0047
+Epoch 233/256
+1/1 [==============================] - 0s 39ms/step - loss: 0.0045 - mse: 0.0045
+Epoch 234/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.0044 - mse: 0.0044
+Epoch 235/256
+1/1 [==============================] - 0s 23ms/step - loss: 0.0042 - mse: 0.0042
+Epoch 236/256
+1/1 [==============================] - 0s 24ms/step - loss: 0.0040 - mse: 0.0040
+Epoch 237/256
+1/1 [==============================] - 0s 27ms/step - loss: 0.0039 - mse: 0.0039
+Epoch 238/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.0037 - mse: 0.0037
+Epoch 239/256
+1/1 [==============================] - 0s 19ms/step - loss: 0.0036 - mse: 0.0036
+Epoch 240/256
+1/1 [==============================] - 0s 23ms/step - loss: 0.0034 - mse: 0.0034
+Epoch 241/256
+1/1 [==============================] - 0s 4ms/step - loss: 0.0033 - mse: 0.0033
+Epoch 242/256
+1/1 [==============================] - 0s 13ms/step - loss: 0.0032 - mse: 0.0032
+Epoch 243/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.0030 - mse: 0.0030
+Epoch 244/256
+1/1 [==============================] - 0s 5ms/step - loss: 0.0029 - mse: 0.0029
+Epoch 245/256
+1/1 [==============================] - 0s 36ms/step - loss: 0.0028 - mse: 0.0028
+Epoch 246/256
+1/1 [==============================] - 0s 5ms/step - loss: 0.0027 - mse: 0.0027
+Epoch 247/256
+1/1 [==============================] - 0s 8ms/step - loss: 0.0026 - mse: 0.0026
+Epoch 248/256
+1/1 [==============================] - 0s 18ms/step - loss: 0.0025 - mse: 0.0025
+Epoch 249/256
+1/1 [==============================] - 0s 20ms/step - loss: 0.0024 - mse: 0.0024
+Epoch 250/256
+1/1 [==============================] - 0s 3ms/step - loss: 0.0023 - mse: 0.0023
+Epoch 251/256
+1/1 [==============================] - 0s 7ms/step - loss: 0.0022 - mse: 0.0022
+Epoch 252/256
+1/1 [==============================] - 0s 21ms/step - loss: 0.0021 - mse: 0.0021
+Epoch 253/256
+1/1 [==============================] - 0s 33ms/step - loss: 0.0020 - mse: 0.0020
+Epoch 254/256
+1/1 [==============================] - 0s 19ms/step - loss: 0.0020 - mse: 0.0020
+Epoch 255/256
+1/1 [==============================] - 0s 12ms/step - loss: 0.0019 - mse: 0.0019
+Epoch 256/256
+1/1 [==============================] - 0s 11ms/step - loss: 0.0018 - mse: 0.0018
+```
+</details>
+
+
+### 훈련된 모델의 예측값
+
+위의 훈련을 거친 모델을 통해, 완전히 새로운 데이터의 목표값을 예측할 수 있습니다.
+새로운 데이터(x')에 따른 모델의 예측값(y')는 다음과 같습니다.
+
+```
+x: +11 ,        y: +48  (+48.048248),   ans: 48
+x: -4  ,        y: -27  (-26.960201),   ans: -27
+x: -9  ,        y: -52  (-51.963020),   ans: -52
+x: +2  ,        y: +3   (+3.043178),    ans: 3
+x: -10 ,        y: -57  (-56.963577),   ans: -57
+x: -2  ,        y: -17  (-16.959076),   ans: -17
+x: +0  ,        y: -7   (-6.957949),    ans: -7
+x: -3  ,        y: -22  (-21.959639),   ans: -22
+x: +1  ,        y: -2   (-1.957386),    ans: -2
+x: -6  ,        y: -37  (-36.961327),   ans: -37
+x: -7  ,        y: -42  (-41.961891),   ans: -42
+x: -5  ,        y: -32  (-31.960764),   ans: -32
+x: -8  ,        y: -47  (-46.962456),   ans: -47
+x: -1  ,        y: -12  (-11.958511),   ans: -12
+```
+
+### 소스코드
+
+<details>
+<summary>소스코드 보기</summary>
+<br>
+
+```python
+from tensorflow.keras import layers, Sequential
+import tensorflow as tf
+import numpy as np
+
+
+def make_model():
+    model = Sequential([layers.Dense(1,
+                                     activation='linear',
+                                     input_shape=(1,))])
+    optimizer = tf.optimizers.SGD(0.01)
+    model.compile(loss='mse',
+                  optimizer=optimizer,
+                  metrics=['mse'])
+    return model
+
+
+model = make_model()
+model.summary()
+
+
+train_x = [5, -15, 7, -7, -11, 3, -9, 1, -1, 11, 9, -13, 13, -3, -5]
+train_y = [18, -82, 28, -42, -62, 8, -52, -2, -12, 48, 38, -72, 58, -22, -32]
+predict_x = [11, -4, -9, 2, -10, -2, 0, -3, 1, -6, -7, -5, -8, -1]
+
+model.fit(x=train_x,
+          y=train_y,
+          batch_size=16,
+          epochs=256,
+          shuffle=True)
+
+predict_y = model.predict(x=predict_x)[:,0]
+
+for x, y in zip(predict_x, predict_y):
+    print(f'x: {x:<+4d},\ty: {round(y):<+4d} ({y:+f}),\tans: {5*x-7}')
+
+```
+</details>
+
+
+### 검증
+
+머신러닝 모델의 한계로 언제나 완전한 정답만을 출력하지는 않습니다.
+앞서 생성한 선형회귀 모델이 예측한 값이 정답인지 검증하기 위해서 수작업으로 값을 한 번 더 계산해 볼 것입니다.
+
+문제에 주어진 설명 변수와 목표 변수 중 3개의 쌍을 뽑아, 분류 직선의 식을 구해볼 것입니다.
+
+1. x=5, y=18
+2. x=-15, y=-82
+
+식이 y=ax+b라고 할 때,
+
+1번식과 2번식을 연립하여 a와 b의 값을 특정할 수 있습니다.
+
+1. 18 = 5a + b
+2. -82 = -15a + b
+
+1번식에 3을 곱한뒤 2번식과 연립하면 다음의 값이 나옵니다.
+
+* a = 5
+* b = -7
+
+따라서 분류 직선의 식은 y=5x-7이 됩니다.
+이 식이 올바른지 확인을 위해 추가로 하나의 설명 변수와 목표 변수 쌍을 대입해 봅니다.
+
+* x=7, y=28
+
+28 = 7*5-7 (맞음)
+
+앞선 과정을 통해 얻은 식 y=5x-7을 통해, 선형회귀모델의 예측값과, 본래 나와야 할 정답과의 오차를 비교해봅니다.
+
+(모두 정답이었습니다. 감사합니다.)
