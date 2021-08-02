@@ -12,7 +12,7 @@ Baekjoon Online Judge 문제를 풀이하는데 사용한 소스 저장소입니
 | ------ | ---------------------------------------------- | ---------------- | ----------------- |
 | 1000   | [📁](/Baekjoon%20Online%20Judge/problem/1000)  | [Bronze V]       | A+B               |
 | 1003   | [📁](/Baekjoon%20Online%20Judge/problem/1003)  | [Silver III]     | 피보나치 함수           |
-| 1016   | [📁](/Baekjoon%20Online%20Judge/problem/1016)  |                  | 제곱 ㄴㄴ 수           |
+| 1016   | [📁](/Baekjoon%20Online%20Judge/problem/1016)  | [Gold I]         | 제곱 ㄴㄴ 수           |
 | 1054   | [📁](/Baekjoon%20Online%20Judge/problem/1054)  |                  | 팰린드롬 문장           |
 | 1074   | [📁](/Baekjoon%20Online%20Judge/problem/1074)  |                  | Z                 |
 | 1085   | [📁](/Baekjoon%20Online%20Judge/problem/1085)  |                  | 직사각형에서 탈출         |
