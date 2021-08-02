@@ -83,6 +83,7 @@ Baekjoon Online Judge 문제를 풀이하는데 사용한 소스 저장소입니
 | 3052   | [📁](/Baekjoon%20Online%20Judge/problem/3052)  |                  | 나머지               |
 | 3190   | [📁](/Baekjoon%20Online%20Judge/problem/3190)  |                  | 뱀                 |
 | 4153   | [📁](/Baekjoon%20Online%20Judge/problem/4153)  |                  | 직각삼각형             |
+| 4673   | [📁](/Baekjoon%20Online%20Judge/problem/4673)  | [Silver V]       | 셀프 넘버             |
 | 4948   | [📁](/Baekjoon%20Online%20Judge/problem/4948)  |                  | 베르트랑 공준           |
 | 4949   | [📁](/Baekjoon%20Online%20Judge/problem/4949)  |                  | 균형잡힌 세상           |
 | 5430   | [📁](/Baekjoon%20Online%20Judge/problem/5430)  |                  | AC                |
