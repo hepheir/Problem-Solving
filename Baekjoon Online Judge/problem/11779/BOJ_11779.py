@@ -4,22 +4,20 @@ from sys import stdin, maxsize
 from typing import DefaultDict, Dict, List, Tuple
 
 
-_T_distance = int
-_T_node = int
-
-
 def dijkstra(graph: Dict[int, Dict[int, int]],
              root: int) -> Tuple[DefaultDict[int, int], Dict[int, int]]:
-    heap: List[Tuple[_T_distance, _T_node]] = []
+    heap: List[Tuple[int, int, int]] = []
 
     distance = defaultdict(lambda: maxsize)
     parent = dict()
 
-    distance[root] = 0
-    heappush(heap, (distance[root], root))
+    root_node = root
+    root_dist = 0
+    root_waypoints = 0
+    heappush(heap, (root_dist, root_waypoints, root_node))
 
     while heap:
-        dist, node = heappop(heap)
+        dist, waypoints, node = heappop(heap)
 
         if dist > distance[node]:
             continue
@@ -30,7 +28,7 @@ def dijkstra(graph: Dict[int, Dict[int, int]],
             if new_dist <= distance[child]:
                 distance[child] = new_dist
                 parent[child] = node
-                heappush(heap, (new_dist, child))
+                heappush(heap, (new_dist, waypoints+1, child))
 
     return distance, parent
 
