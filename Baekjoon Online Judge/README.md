@@ -12,7 +12,7 @@ Baekjoon Online Judge 문제를 풀이하는데 사용한 소스 저장소입니
 | ------ | ---------------------------------------------- | ---------------- | ----------------- |
 | 1000   | [📁](/Baekjoon%20Online%20Judge/problem/1000)  | [Bronze V]       | A+B               |
 | 1003   | [📁](/Baekjoon%20Online%20Judge/problem/1003)  | [Silver III]     | 피보나치 함수           |
-| 1016   | [📁](/Baekjoon%20Online%20Judge/problem/1016)  |                  | 제곱 ㄴㄴ 수           |
+| 1016   | [📁](/Baekjoon%20Online%20Judge/problem/1016)  | [Gold I]         | 제곱 ㄴㄴ 수           |
 | 1054   | [📁](/Baekjoon%20Online%20Judge/problem/1054)  |                  | 팰린드롬 문장           |
 | 1074   | [📁](/Baekjoon%20Online%20Judge/problem/1074)  |                  | Z                 |
 | 1085   | [📁](/Baekjoon%20Online%20Judge/problem/1085)  |                  | 직사각형에서 탈출         |
@@ -83,6 +83,7 @@ Baekjoon Online Judge 문제를 풀이하는데 사용한 소스 저장소입니
 | 3052   | [📁](/Baekjoon%20Online%20Judge/problem/3052)  |                  | 나머지               |
 | 3190   | [📁](/Baekjoon%20Online%20Judge/problem/3190)  |                  | 뱀                 |
 | 4153   | [📁](/Baekjoon%20Online%20Judge/problem/4153)  |                  | 직각삼각형             |
+| 4673   | [📁](/Baekjoon%20Online%20Judge/problem/4673)  | [Silver V]       | 셀프 넘버             |
 | 4948   | [📁](/Baekjoon%20Online%20Judge/problem/4948)  |                  | 베르트랑 공준           |
 | 4949   | [📁](/Baekjoon%20Online%20Judge/problem/4949)  |                  | 균형잡힌 세상           |
 | 5430   | [📁](/Baekjoon%20Online%20Judge/problem/5430)  |                  | AC                |
